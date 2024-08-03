@@ -15,24 +15,6 @@ I am a Network Engineering Technology Student at NAIT. We learn about different 
 
 ---
 
-# Latest updates:
-
-## Youtube:
-
-### Wireguard protocol analysis:
-
-The course NETW2300 focuses on network analysis, where we use tools like Wireshark to analyze application data for a more in-depth understanding of network behavior.
-
-[NETW2300 - Wireguard Protocol Research Project](https://youtube.com/live/tQCs9wlxhs0)
-
-### VMware workstation pro vmxnet3 virtual network device:
-
-Since I began using it, I have been interested in tagging VLANs on a Windows 10 client VM in VMware Workstation. In this video, I demonstrate how to tag VLANs on the network adapter for a Windows 10 client VM by changing the network adapter to vmxnet3.
-
-[VMXNET3 network adapter type in VMware workstation pro](https://youtube.com/live/ICRd_e4jr9w)
-
----
-
 ## VMware Private cloud project:
 
 This was one of the most significant projects that I had to work on in my COMP2000 course in NET. In this project, students had to build their own private cloud infrastructure and host websites for other students to demonstrate connectivity over a simulated ISP environment. [Zerotier peer-to-peer mesh VPN](https://www.zerotier.com/) connected the private clouds.
