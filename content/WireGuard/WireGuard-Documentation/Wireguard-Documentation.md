@@ -1,6 +1,6 @@
 ---
 tags:
-  - wireguard
+  - WireGuard
 Author: Diyaa Alkanakre
 title: WireGuard general documentation
 ---
