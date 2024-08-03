@@ -67,7 +67,7 @@ BGP can be seen as
 
 ## IP Addresses Allocation:
 
-![[Attachments/Pasted image 20231221185354.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221185354.png]]
 
 The internet public IP addresses are distributed by the following organizations.
 
@@ -95,14 +95,14 @@ The internet public IP addresses are distributed by the following organizations.
 | 0                     | 16   | Reserved for RPKI unallocated space invalidation          | RFC 6483, RFC 7607 |
 | 1–23455               | 16   | **==Public ASNs==**                                       |                    |
 | 23456                 | 16   | Reserved for AS Pool Transition                           | RFC 6793           |
-| 23457–64495           | 16   | ==**Public ASNs**==                                       |                    |
-| 64496–64511           | 16   | Reserved for use in ==**documentation**== and sample code | RFC 5398           |
-| 64512–65534           | 16   | Reserved for ==**private**== use                          | RFC 1930, RFC 6996 |
+| 23457–64495           | 16   | **==Public ASNs==**                                       |                    |
+| 64496–64511           | 16   | Reserved for use in **==documentation==** and sample code | RFC 5398           |
+| 64512–65534           | 16   | Reserved for **==private==** use                          | RFC 1930, RFC 6996 |
 | 65535                 | 16   | Reserved                                                  | RFC 7300           |
-| 65536–65551           | 32   | Reserved for use in ==**documentation**== and sample code | RFC 5398, RFC 6793 |
+| 65536–65551           | 32   | Reserved for use in **==documentation==** and sample code | RFC 5398, RFC 6793 |
 | 65552–131071          | 32   | Reserved                                                  |                    |
-| 131072–4199999999     | 32   | ==**Public 32-bit ASNs**==                                |                    |
-| 4200000000–4294967294 | 32   | Reserved for ==**private**== use                          | RFC 6996           |
+| 131072–4199999999     | 32   | **==Public 32-bit ASNs==**                                |                    |
+| 4200000000–4294967294 | 32   | Reserved for **==private==** use                          | RFC 6996           |
 | 4294967295            | 32   | Reserved                                                  | RFC 7300           |
 
 Note: reference for this table is footnote [^1].
@@ -111,9 +111,9 @@ Note: reference for this table is footnote [^1].
 
 The 2-bytes ASN has $65,536$ ($2^{16}$) possible AS numbers. IANA reserves 1026 of these numbers (64512-65534) for private ASN use. You can look at the table under [[#BGP Autonomous Systems]] for more information about the allocation of the ASNs.
 
-ASNs in between 0 and 65535 are called ==**mappable ASNs**==, because they can be presented in 2-bytes.
+ASNs in between 0 and 65535 are called **==mappable ASNs==**, because they can be presented in 2-bytes.
 
-*Note: the information in this section is mainly taken from the article by Jeff Doyle linked in footnote [^4] under the [[#References]] section. This is also explained in a video on the packet pusher blog linked in footnote [^5] undern the [[#References]] section.*
+*Note: the information in this section is mainly taken from the article by Jeff Doyle linked in footnote [^4] under the [[#References]] section. This is also explained in a video on the packet pusher blog linked in footnote [^5] under the [[#References]] section.*
 
 ### Autonomous System Number 4-bytes format:
 
@@ -131,8 +131,8 @@ This is the simplest way of representing an ASN. You simply type the number in d
 This form of representation breaks the ASN into two 16-bit sections with a dot in the middle.
 
 The presentation of asdot+ contains the following values:
-- ==**low-order value**==: First 16 bits
-- ==**high-order value**==: Last 16 bits
+- **==low-order value==**: First 16 bits
+- **==high-order value==**: Last 16 bits
 
 > [!example]
 > `6.65535`
@@ -190,7 +190,7 @@ To convert an asplain value below 65536 to asdot+, you simply write the value in
 > $$
 > You can validate the answer on the following website: [asplain to asdot+ BGP converter](https://www.networkers-online.com/tools/bgp-asn-4byte-converter/)
 > 
-> ![[Attachments/Pasted image 20231222193357.png]]
+> ![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231222193357.png]]
 > 
 
 #### Autonomous System dot (asdot) presentation of the ASN:
@@ -201,7 +201,7 @@ Asdot is combines the presentation of asplain and asdot+. The ASNs that fit in t
 
 > [!important]
 > - Administrative distance indicate the trust worthiness of a routing.
-> - ==**The lower the administrative distance the more trust worthy the routing protocol.**==
+> - **==The lower the administrative distance the more trust worthy the routing protocol.==**
 
 | Routing source | Administrative distance |
 | --- | --- |
@@ -219,37 +219,37 @@ Asdot is combines the presentation of asplain and asdot+. The ASNs that fit in t
 ## BGP Characteristics:
 
 > [!important]
-> NLRI is usually referred to as a ==**Route Advertisement (RA)**==. In BGP NLRI has similar characteristics of the OSPF route advertisements. However, it is not the same thing.
+> NLRI is usually referred to as a **==Route Advertisement (RA)==**. In BGP NLRI has similar characteristics of the OSPF route advertisements. However, it is not the same thing.
 
 - Forms Neighborships.
 - Neighbor's IP address must be set explicitly in the configuration of the router.
 - Establishes a TCP session on port 179.
 - Advertises address prefix and length.
-    - This is known as: ==**Network Layer Reachability Information (NLRI).**==
-- Advertises a collection of ==**path attributes**== used for ==**path selection**==.
-    - BGP has ==**11 path attributes**==.
-- It is called a ==**path vector**== routing protocol, because it tells the entire path to the destination.
+    - This is known as: **==Network Layer Reachability Information (NLRI).==**
+- Advertises a collection of **==path attributes==** used for **==path selection==**.
+    - BGP has **==11 path attributes==**.
+- It is called a **==path vector==** routing protocol, because it tells the entire path to the destination.
 
 ## BGP Route Reflector:
 
-In iBGP there is an issue that requires the route reflector. By default iBGP ==**assumes**== that if a neighbor advertises a route, that it advertised it to everyone else. This is because iBGP ==**assume full internal mesh topology**== in between all the routers. The issue with full mesh connectivity is that it requires a large number of neighborships to form when scaling.
+In iBGP there is an issue that requires the route reflector. By default iBGP **==assumes==** that if a neighbor advertises a route, that it advertised it to everyone else. This is because iBGP **==assume full internal mesh topology==** in between all the routers. The issue with full mesh connectivity is that it requires a large number of neighborships to form when scaling.
 
-==**The route reflector tells an iBGP router to advertise a route it learned to all of it's neighbors.**==
+**==The route reflector tells an iBGP router to advertise a route it learned to all of it's neighbors.==**
 
-![[Attachments/Pasted image 20231221212102.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221212102.png]]
 
 > [!tip]
 > If you are familiar with the idea of the designated router in OSPF, you can look at the route reflector in BGP the same one. *Assume that R4, R5, and R3 are DROTHERs.*
 
-![[Attachments/Pasted image 20231221212943.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221212943.png]]
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
 ## BGP Confederation:
 
-BGP confederation allows the use of ==**sub-autonomous systems**==. ==**A full mesh connectivity is required within a sub-autonomous system, but not in between the autonomous systems.**==
+BGP confederation allows the use of **==sub-autonomous systems==**. **==A full mesh connectivity is required within a sub-autonomous system, but not in between the autonomous systems.==**
 
-![[Attachments/Pasted image 20231221212809.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221212809.png]]
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
@@ -262,14 +262,14 @@ BGP states:
 > [!important]
 > The port that BGP uses is TCP/179.
 
-- ==**Idle**==: sent the SYN packet of the TCP handshake.
-- ==**Connect**==: received the SYN/ACK packet of the TCP handshake.
-- ==**Active**==: sent the ACK packet and completed the 3-way TCP handshake.
-- ==**Open Sent**==: BGP Open relationship message.
-- ==**Open Confirm**==: BGP confirms the relationship.
-- ==**Established**==: BGP neighborship has been formed and routes can be exchanged now.
+- ==Idle==: sent the SYN packet of the TCP handshake.
+- ==Connect==: received the SYN/ACK packet of the TCP handshake.
+- ==Active==: sent the ACK packet and completed the 3-way TCP handshake.
+- ==Open Sent==: BGP Open relationship message.
+- ==Open Confirm==: BGP confirms the relationship.
+- ==Established==: BGP neighborship has been formed and routes can be exchanged now.
 
-![[Attachments/Pasted image 20231221214904.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221214904.png]]
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
@@ -281,11 +281,11 @@ BGP states:
 
 This message contains the following:
 
-- ==**BGP version number**== (This will be version 4 most of the time).
-- ==**Local autonomous system number**==.
-- ==**Hold time**==.
-- ==**BGP router ID**==.
-- ==**Optional parameters**==.
+- ==BGP version number== (This will be version 4 most of the time).
+- ==Local autonomous system number==.
+- ==Hold time==.
+- ==BGP router ID==.
+- ==Optional parameters==.
 
 ### BGP Keepalive Message:
 
@@ -315,25 +315,25 @@ This message can contain:
 > [!important]
 > The 8 path selection attributes I have in this section aren't the only path selections attributes for BGP out there. However, the majority of these path selection attributes are the most common across multiple vendor's implementation of BGP.
 
-![[../BGP-Basics/Attachments/Pasted image 20230918234722.png]]
+![](Routing/BGP/BGP-primary-notes/Attachments/Pasted%20image%2020240803110323.png)
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
-One of the phrase that could be used to remember the path selection attributes is: ==**W**==e ==**L**==ove ==**O**==ranges ==**A**==s Oranges ==**M**==ean ==**P**==ure ==**R**==efreshment.
+One of the phrase that could be used to remember the path selection attributes is: **==W==**e **==L==**ove **==O==**ranges **==A==**s Oranges **==M==**ean **==P==**ure **==R==**efreshment.
 
 > [!warning]
 > Do not mistake the path selection attribute (prefers the lowest router ID) with the router ID election process.
 
 | Order of matching | Path selection attribute               | Description                                                                                                                                                                             | Influence                                            |     |
 | ----------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --- |
-| 1                 | ==**W**==eight                         | Locally significant, ==Cisco-specific parameter==. Commonly used to influence outbound routing decisions. Can be used to prioritize one link over the other.                            | A higher value is preferred                          |     |
-| 2                 | ==**L**==ocal Preference               | Communicated through the a ==single AS== to ==influence outbound routing decisions==.                                                                                                   | A higher value is preferred                          |     |
-| 3                 | ==**O**==riginate                      | Paths ==sourced locally== are preferred.                                                                                                                                                | ==Directly connected== links are preferred           |     |
-| 4                 | ==**A**==S path length                 | The number of autonomous systems in the "AS_PATH" attribute. Lower AS path lengths are preferred. Commonly used to influence inbound routing decisions.                                 | Lower value is preferred                             |     |
-| 5                 | ==**O**==rigin type                    | Indicates how the route was injected into BGP. i (network command), e (EGP), or ? (redistributed).                                                                                      | (i) is preferred to (e), and (e) is preferred to (?) |     |
-| 6                 | ==**M**==ulti-Exit Discriminator (MED) | set and advertised by routers in one AS to influence the BGP path selection decision of routers in another AS. This might be known as ==Metric== in some vendor's implementation of BGP | A lower MED is preferred                             |     |
-| 7                 | ==**P**==aths                          | Prefer eBGP path over iBGP path.                                                                                                                                                        | eBGP has an AD of 20. However iBGP has an AD of 200  |     |
-| 8                 | ==**R**==outer ID                      | A tie breaker. The route received from the router with the lowest router ID.                                                                                                            | Lowest router ID is preferred                        |     |
+| 1                 | **==W==**eight                         | Locally significant, ==Cisco-specific parameter==. Commonly used to influence outbound routing decisions. Can be used to prioritize one link over the other.                            | A higher value is preferred                          |     |
+| 2                 | **==L==**ocal Preference               | Communicated through the a ==single AS== to ==influence outbound routing decisions==.                                                                                                   | A higher value is preferred                          |     |
+| 3                 | **==O==**riginate                      | Paths ==sourced locally== are preferred.                                                                                                                                                | ==Directly connected== links are preferred           |     |
+| 4                 | **==A==**S path length                 | The number of autonomous systems in the "AS_PATH" attribute. Lower AS path lengths are preferred. Commonly used to influence inbound routing decisions.                                 | Lower value is preferred                             |     |
+| 5                 | **==O==**rigin type                    | Indicates how the route was injected into BGP. i (network command), e (EGP), or ? (redistributed).                                                                                      | (i) is preferred to (e), and (e) is preferred to (?) |     |
+| 6                 | **==M==**ulti-Exit Discriminator (MED) | set and advertised by routers in one AS to influence the BGP path selection decision of routers in another AS. This might be known as ==Metric== in some vendor's implementation of BGP | A lower MED is preferred                             |     |
+| 7                 | **==P==**aths                          | Prefer eBGP path over iBGP path.                                                                                                                                                        | eBGP has an AD of 20. However iBGP has an AD of 200  |     |
+| 8                 | **==R==**outer ID                      | A tie breaker. The route received from the router with the lowest router ID.                                                                                                            | Lowest router ID is preferred                        |     |
 
 
 ## BGP Synchronization:
@@ -341,7 +341,7 @@ One of the phrase that could be used to remember the path selection attributes i
 - BGP synchronization is a rule that avoids an unintentional network (aka, black hole).
 - This feature tells the router to ==only advertise a route learned from an iBGP peer to an eBGP peer when there is an exact match of that route learned from an IGP in the routing table==.
 
-![[Attachments/Pasted image 20231224221602.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231224221602.png]]
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
@@ -381,7 +381,7 @@ The multihop feature in BGP allows for a router to ==establish BGP neighborship 
 
 In BGP, the routers can't afford to have a flapping link. A flapping link will result in ==route dampening==. If there is a ==flapping interface== on a router that has formed a BGP neighborship with another router, that router might get their routes dampened. ==BGP dampens the path to the AS==. This BGP feature is known as ==BGP Route Flap Dampening (RFD)==. 
 
-![[Attachments/Pasted image 20231225145422.png]]
+![[Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231225145422.png]]
 
 BGP is fully converged in the first state of the network in the diagram above. The moment a link connected to a peer becomes unavailable. The following steps are taken:
 
@@ -402,7 +402,7 @@ There are multiple factors that affect the speed at which a route is dampened:
 
 ### Aggressive BGP route flap dampening:
 
-Some service providers might choose to implement aggressive route flap dampening policies. This might include ==thresholds of timers based on the length of the prefix being advertised==. ==A `/24` network might get a higher suppression timer than a `/19` network==. This approach maybe required when the ISP is doing prefix aggregation (summarization) into BGP to improve the efficiency and reduce the number of routes of the "internet".
+Some service providers might choose to implement aggressive route flap dampening policies. This might include ==thresholds of timers based on the length of the prefix being advertised==. ==A== `/24`  ==network might get a higher suppression timer than a== `/19` ==network==. This approach maybe required when the ISP is doing prefix aggregation (summarization) into BGP to improve the efficiency and reduce the number of routes of the "internet".
 
 
 
@@ -418,7 +418,7 @@ Some service providers might choose to implement aggressive route flap dampening
 > In the real world. An organization with an AS assigned to them by their RIR provider CAN NOT advertise to BGP unless they have a minimum prefix of `/24`. This is to reduce the size of the internet routing table and increase routing efficiency.
 ## Basic BGP Configuration:
 
-![[Attachments/BGP-Labs-diagrams.drawio.svg]]
+![[Routing/BGP/BGP-primary-notes/Attachments/BGP-Labs-diagrams.drawio.svg]]
 
 *Note: the screenshot(s) above is taken from the video linked in footnote [^2] under the [[#References]] section.*
 
@@ -464,7 +464,7 @@ Pick up here [video URL copied with pick up time | `1:21:11`](https://youtu.be/S
 ## Unreferenced links:
 
 -  [The Basics of BGP: Border Gateway Protocol Explained | CBT Nuggets | Video](https://youtu.be/4e3E5sjItWM?list=PLyt5OhlhlmJUGZ9kM45QWX5ZrCLoXVQXD)
--  [BGP support for four-octet Autonomous System (AS) Number Space | RFC6793 | Document](https://www.rfc-editor.org/rfc/rfc6793)
+-  [[AS) Number Space | RFC6793 | Document](https://www.rfc-editor.org/rfc/rfc6793|BGP support for four-octet Autonomous System (AS) Number Space | RFC6793 | Document]]
 -  [A Border Gateway Protocol 4 | RFC4271 | Document](https://www.rfc-editor.org/rfc/rfc4271)
 -  [Micro Nugget: BGP Configuration Explained | CBT Nugget | Video | Keith Barker](https://youtu.be/XRetkD4UUL4?list=PLyt5OhlhlmJUGZ9kM45QWX5ZrCLoXVQXD)
 - [BGP session establishment | PacketPushers | article](https://packetpushers.net/demystifying-bgp-session-establishments/)
