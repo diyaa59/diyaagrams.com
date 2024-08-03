@@ -23,3 +23,10 @@ This website is mostly a way for me to share my documentation out of Obsidian on
 [[VyOS/VyOS-CLI-Syntax/VyOS-CLI-Syntax]] - This page has general command line syntax commands of VyOS router.
 
 [[Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/lets-encrypt-p12-cert]] - This page explains how to generate a lets encrypt certificate with DNS validation.
+
+[BGP-primary-notes](Routing/BGP/BGP-primary-notes/BGP-primary-notes.md) - My BGP notes.
+
+[DDNS-Cloudflare-bash](Cloudflare/DDNS-Cloudflare-Bash-Documentation/DDNS-Cloudflare-bash.md) - Automated DDNS override with Cloudflare API in a bash script.
+
+
+
