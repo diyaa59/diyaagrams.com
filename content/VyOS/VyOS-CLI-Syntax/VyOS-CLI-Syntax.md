@@ -66,7 +66,7 @@ This command will merge the system changes into the running system configuration
 vyos@vyos# commit comment "Changing syetm interface"
 ```
 
-![Pasted image 20240408233652](VyOS/VyOS-CLI-Syntax/Attachments/Pasted%20image%2020240408233652.png)
+![[VyOS/VyOS-CLI-Syntax/Attachments/Pasted image 20240408233652.png]]
 
 ### Show uncommitted configuration:
 
@@ -76,7 +76,7 @@ Running the following command in configuration mode will show you what configura
 compare saved
 ```
 
-![Pasted image 20240409003149](VyOS/VyOS-CLI-Syntax/Attachments/Pasted%20image%2020240409003149.png)
+![[VyOS/VyOS-CLI-Syntax/Attachments/Pasted image 20240409003149.png]]
 ### Save configuration to disk:
 
 You need to use the following command to save your configuration and merge it to the system startup config on disk. Keep in mind that this command will not merge uncommitted changes.
@@ -85,7 +85,7 @@ You need to use the following command to save your configuration and merge it to
 vyos@vyos# save
 ```
 
-![Pasted image 20240408233631](VyOS/VyOS-CLI-Syntax/Attachments/Pasted%20image%2020240408233631.png)
+![[VyOS/VyOS-CLI-Syntax/Attachments/Pasted image 20240408233631.png]]
 
 ### Show configuration:
 
@@ -111,7 +111,7 @@ edit interface ethernet eth0
 
 As you can see now we are in the `ethernet eth0` section of the config:
 
-![Pasted image 20240409001441](VyOS/VyOS-CLI-Syntax/Attachments/Pasted%20image%2020240409001441.png)
+![[VyOS/VyOS-CLI-Syntax/Attachments/Pasted image 20240409001441.png]]
 
 To exit out of the hierarchy configuration you can use the exit command:
 
@@ -157,7 +157,7 @@ Running the following command in configuration mode will show the configuration 
 run show interfaces
 ```
 
-![Pasted image 20240409002125](VyOS/VyOS-CLI-Syntax/Attachments/Pasted%20image%2020240409002125.png)
+![[VyOS/VyOS-CLI-Syntax/Attachments/Pasted image 20240409002125.png]]
 
 ## Setup a static route:
 
@@ -289,5 +289,5 @@ set protocols bgp 64512 neighbor 203.0.113.2 address-family ipv4-unicast default
 # References:
 
 [VyOS 1.3 quick start documentation](https://docs.vyos.io/en/equuleus/quick-start.html)
-[VyOS Configuration navigation](https://docs.vyos.io/en/equuleus/cli.html#seeing-and-navigating-the-configuration)
+[[https://docs.vyos.io/en/equuleus/cli.html#seeing-and-navigating-the-configuration]]
 [VyOS BGP setup documentation](https://docs.vyos.io/en/equuleus/configuration/protocols/bgp.html)

@@ -16,17 +16,17 @@ Documentation of how to use Pfsense to utilize Policy Based Routing (PBR) to a r
 
 I am using the range of `198.51.100.0/30` on the VPN tunnel between the VPS and Pfsense. Just in case you are asking "Isn't that a public IP?". Please, review [RFC5737](https://www.rfc-editor.org/rfc/rfc5737) 😉.
 
-![Pasted image 20240420030137](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420030137.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420030137.png]]
 
 I am also doing MSS clamping to ensure that the TCP segment size does not exceed the value of the MTU on the WireGuard VPN tunnel. What is MSS clamping you ask? Review [RFC4459](https://www.rfc-editor.org/rfc/rfc4459) 😉.
 
-![Pasted image 20240420030529](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420030529.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420030529.png]]
 
 # Diagram:
 
 This is a diagram overview of what will be configured by following the steps in this document.
 
-![Policy-Based-Routing-With-Pfsense-over-WireGuard.drawio](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Diagram/Policy-Based-Routing-With-Pfsense-over-WireGuard.drawio.svg)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Diagram/Policy-Based-Routing-With-Pfsense-over-WireGuard.drawio.svg]]
 
 # VPS setup:
 
@@ -221,48 +221,48 @@ sudo systemctl enable --now wg-quick@wg0
 
 Download the WireGuard package from available packages section under the package manager in Pfsense.
 
-![Pasted image 20240420020156](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020156.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020156.png]]
 
 Search for WireGuard and install the WireGuard package.
 
-![Pasted image 20240420020227](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020227.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020227.png]]
 
 ## Create a new WireGuard tunnel:
 
 Create a new WireGuard tunnel on Pfsense:
 
-![Pasted image 20240420020340](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020340.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020340.png]]
 
 > [!IMPORTANT]
 >  Add the `Pfsense private key` you generated in a previous step and assign the tunnel IP address.
 
-![Pasted image 20240420020652](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020652.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020652.png]]
 
-![Pasted image 20240420020744](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020744.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020744.png]]
 
 ## Enable the WireGuard package:
 
 Enable the WireGuard package:
 
-![Pasted image 20240420022925](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420022925.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022925.png]]
 
 ## Add a peer to the WireGuard tunnel:
 
 Add a peer to the tunnel:
 
-![Pasted image 20240420020856](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420020856.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020856.png]]
 
 > [!IMPORTANT]
 >  - Add the `VPS private key` you generated in a previous step in the `Public key` box shown in the screenshot below.
 >  - Add the `Preshared key` value you created in a previous step in the `Pre-shared key` box shown in the screenshot below.
 
-![Pasted image 20240420021305](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420021305.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420021305.png]]
 
 ## Assign the WireGuard tunnel interface on Pfsense:
 
 Create a tunnel interface on Pfsense:
 
-![Pasted image 20240420021437](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420021437.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420021437.png]]
 
 > [!warning]
 > Pfsense does the calculation "automatically" based on the layer 3 protocol.
@@ -271,20 +271,20 @@ Create a tunnel interface on Pfsense:
 > - 1420 - 40 = 1380 for IPv4 (20 bytes for IPv4 header and 20 bytes for TCP header)
 > - 1420 - 60 = 1360 for IPv6 (40 bytes for IPv6 header and 20 bytes for TCP header)
 
-![Pasted image 20240420021818](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420021818.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420021818.png]]
 
 ## Add the VPS as a gateway on Pfsense:
 
 Adding a gateway of the remove VPS IP on the WireGuard interface:
 
-![Pasted image 20240420022147](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420022147.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022147.png]]
 
-![Pasted image 20240420022224](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420022224.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022224.png]]
 
 
-![Pasted image 20240420022527](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420022527.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022527.png]]
 
-![Pasted image 20240420022701](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420022701.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022701.png]]
 
 ## Add an outbound "No NAT" policy:
 
@@ -293,28 +293,28 @@ Add a "No NAT policy".
 > [!IMPORTANT]
 > NAT is eval and you should try to reduce NATing as much as you can in your life. The less you NAT the less kittens die.... [Read this article](https://www.zerotier.com/blog/the-state-of-nat-traversal/) 🙁.
 > 
-> ![Pasted image 20240420033042](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420033042.png)
+> ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033042.png]]
 
 
-![Pasted image 20240420033206](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420033206.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033206.png]]
 
 > [!NOTE]
 > By default the outbound NAT rules are set to automatic in Pfsense. You will need to set the NAT rules to hybrid to apply manual NAT policies. The manual policies will apply before the the automatic NAT policies.
 
-![Pasted image 20240420033322](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420033322.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033322.png]]
 
 Scroll to the very bottom and you will see the arrow pointing upward at the bottom right of your screen. Click the button to create a new NAT rule and add it to the top of the NAT rulebase.
 
-![Pasted image 20240420033435](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420033435.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033435.png]]
 
 
-![Pasted image 20240420033606](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420033606.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033606.png]]
 
 ## Create firewall rules on Pfsense:
 
 Create a new firewall rule to utilize policy based routing over the WireGuard tunnel you created.
 
-![Pasted image 20240420023222](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420023222.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420023222.png]]
 
 
 > [!NOTE]
@@ -325,27 +325,27 @@ I will be placing this rule on the interface where client traffic is coming inbo
 
 You will see the add button at the bottom of the screen with an arrow pointing upward.
 
-![Pasted image 20240420023456](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420023456.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420023456.png]]
 
 > [!IMPORTANT]
 > Configure the parameters in the rule. Do NOT save the rule just yet, there is more to configure..... go to the next screenshot.
 
-![Pasted image 20240420023915](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420023915.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420023915.png]]
 
 You will see an option above the save button "`Display Advanced".
 
-![Pasted image 20240420024111](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024111.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024111.png]]
 
 > [!IMPORANT]
 > You will have to apply the rules in Pfsense in order for the rule to take affect. You will see a pop up prompting you to apply the rules after you save the rule. You need to click the Apply button for the changes to take affect.
 
 Scroll down until you find the `Gateway` option. Set the gateway to the VPS gateway you configured in previous steps. Now you can save the rule 🙂.
 
-![Pasted image 20240420024221](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024221.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024221.png]]
 
 Now you have configured policy based routing. However, we are not done yet...
 
-![Pasted image 20240420024521](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024521.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024521.png]]
 
 ## Recommended rules setup:
 
@@ -353,27 +353,27 @@ You can allow echo-request (ping) and add a deny rule under the rule in the step
 
 Clone the rule you created in the previous step.
 
-![Pasted image 20240420024716](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024716.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024716.png]]
 
 Change the protocol to `ICMP` and set the `ICMP subtype` to `Echo request`.
 
-![Pasted image 20240420024823](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024823.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024823.png]]
 
 Clone the second rule you created to create a drop rule.
 
-![Pasted image 20240420024917](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420024917.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024917.png]]
 
 Set the action to `Block` and set the `Protocol` to `Any`.
 
-![Pasted image 20240420025027](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420025027.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420025027.png]]
 
 Change the `Gateway` option for the drop rule to `Default` and save the rule.
 
-![Pasted image 20240420025406](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420025406.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420025406.png]]
 
 Your rules should look like this. The idea is to allow TCP, UDP, and echo-request. These are the most common traffic protocols that a host will utilize. The drop rule at the bottom will drop all other traffic. This prevents traffic leak outside the VPN tunnel.
 
-![Pasted image 20240420025500](Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted%20image%2020240420025500.png)
+![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420025500.png]]
 
 Finally, You have made it to the end 🙂. You are now utilizing policy based routing thanks to Pfsense and WireGuard.
 
