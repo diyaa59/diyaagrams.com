@@ -14,6 +14,7 @@ This website is mostly a way for me to share my documentation out of Obsidian on
 My name is Diyaa Alkanakre. I like to spend majority of my personal time making network infrastructure diagrams and technical documentation.
 
 Linkedin: [Diyaa Alkanakre](https://www.linkedin.com/in/diyaa-alkanakre/)
+
 Github: [diyaa59](https://github.com/diyaa59)
 # Pages Highlights:
 
