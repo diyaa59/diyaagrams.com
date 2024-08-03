@@ -5,7 +5,7 @@ tags:
   - Main-Page
 date: 2024-08-03
 ---
-# About:
+# About This Website:
 
 This website is mostly a way for me to share my documentation out of Obsidian on the web through Github pages 🙂.
 
