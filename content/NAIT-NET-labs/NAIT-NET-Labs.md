@@ -1,5 +1,10 @@
 ---
 title: NAIT NET Labs
+Author: Diyaa Alkanakre
+tags:
+  - NAIT
+  - NET
+  - College
 ---
 # Homelab practice labs
 

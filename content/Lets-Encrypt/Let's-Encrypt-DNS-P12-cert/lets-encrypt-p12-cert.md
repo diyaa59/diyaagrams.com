@@ -1,5 +1,10 @@
 ---
 title: Let's Encrypt P12 certificate with DNS validation
+Author: Diyaa Alkanakre
+tags:
+  - Lets-Encrypt
+  - Certificates
+  - TLS
 ---
 # Overview:
 

@@ -1,3 +1,11 @@
+---
+title: Pfsense WireGuard tunnels policy-based routing
+Author: Diyaa Alkanakre
+tags:
+  - Pfsense
+  - WireGuard
+  - Policy-Based-Routing
+---
 # Overview
 
 Documentation of how to use Pfsense to utilize Policy Based Routing (PBR) to a remote cloud virtual private server over a WireGuard VPN tunnel. This will allow you to setup custom routes for specific hosts in your network to route out of a VPS public IP.
