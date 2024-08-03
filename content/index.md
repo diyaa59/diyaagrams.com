@@ -9,6 +9,7 @@ date: 2024-08-03
 
 This website is mostly a way for me to share my documentation out of Obsidian on the web through Github pages 🙂.
 
+You might be wondering why the name of this website is `diyaagrams.com`? I love diagrams and some of my diagrams have been called "diyaagrams" a few times. Therefore, I thought it would be a good idea for me to publish my "diyaagrams" on `diyaagrams.com` 😉.
 # About Me:
 
 My name is Diyaa Alkanakre. I like to spend majority of my personal time making network infrastructure diagrams and technical documentation.
