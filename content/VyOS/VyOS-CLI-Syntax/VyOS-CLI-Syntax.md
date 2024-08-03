@@ -3,7 +3,7 @@ Author: Diyaa Alkanakre
 tags:
   - VyOS
 title: VyOS general CLI syntax
-date: 2024-August-03
+date: 2024-08-03
 ---
 # Table of Contents:
 
