@@ -3,6 +3,7 @@ tags:
   - WireGuard
 Author: Diyaa Alkanakre
 title: WireGuard general documentation
+date: 2024-August-03
 ---
 # Wireguard configuration generation:
 

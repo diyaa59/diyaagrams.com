@@ -5,6 +5,7 @@ tags:
   - NAIT
   - NET
   - College
+date: 2024-August-03
 ---
 # Homelab practice labs
 
