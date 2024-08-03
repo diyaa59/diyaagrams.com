@@ -1,3 +1,6 @@
+---
+title: NAIT NET Labs
+---
 # Homelab practice labs
 
 This repository contains the diagrams of all projects that I have made to learn about new technologies. I try to use open-source technologies to unlock the software's full potential and explore more features.
