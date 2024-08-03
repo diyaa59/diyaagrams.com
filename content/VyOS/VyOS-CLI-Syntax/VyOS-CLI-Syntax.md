@@ -5,16 +5,6 @@ tags:
 title: VyOS general CLI syntax
 date: 2024-08-03
 ---
-# Table of Contents:
-
-```table-of-contents
-style: nestedList # TOC style (nestedList|inlineFirstLevel)
-minLevel: 0 # Include headings from the specified level
-maxLevel: 0 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-debugInConsole: false # Print debug info in Obsidian console
-```
-
 # Overview:
 
 This document outlines the CLI system configuration on VyOS operating system.
