@@ -38,11 +38,11 @@ sudo certbot certonly --manual --manual-auth-hook /etc/letsencrypt/acme-dns-auth
 
 You will see the following message asking you to add a `CNAME` record to your zone.
 
-![Pasted image 20240418152031](Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418152031.png)
+![Pasted image 20240418152031](Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418152031.png)
 
 Add the `CNAME` record and wait for about 60 seconds before hitting enter. You can visit [https://nslookup.io](https://nslookup.io) to validate that your record propagated world wide.
 
-![Pasted image 20240418152254](Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418152254.png)
+![Pasted image 20240418152254](Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418152254.png)
 
 > [!info]
 > There is more information about each certificate file/extension format in the following file `/etc/letsencrypt/live/<domain-name>/README`.
@@ -61,7 +61,7 @@ You will see the output in the screenshot shown above if the certificate request
 openssl version
 ```
 
-![Pasted image 20240418154612](Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418154612.png)
+![Pasted image 20240418154612](Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted%20image%2020240418154612.png)
 
 ## OpenSSL version 1.1.x:
 
