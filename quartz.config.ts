@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "diyaagrams.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "published",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
