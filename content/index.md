@@ -1,5 +1,8 @@
 ---
 title: Welcome to Diyaagrams.com
+Author: Diyaa Alkanakre
+tags:
+  - Main-Page
 ---
 # About:
 
