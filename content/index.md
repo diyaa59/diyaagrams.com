@@ -1,5 +1,5 @@
 ---
-title: Welcome to Diyaagrams.com
+title: Home Page
 Author: Diyaa Alkanakre
 tags:
   - Main-Page
