@@ -7,6 +7,9 @@ date: 2024-08-04
 ---
 # About This Website:
 
+> [!Note]
+> I am still in the process of publishing contents from Obsidian to this website.
+
 This website is mostly a way for me to share my documentation out of Obsidian on the web through GitHub pages 🙂.
 
 You might be wondering why the name of this website is `diyaagrams.com`? I love diagrams and some of my diagrams have been called "diyaagrams" a few times. Therefore, I thought it would be a good idea for me to publish my "diyaagrams" on `diyaagrams.com` 😉.
@@ -38,6 +41,8 @@ The explorer section on the right hand side under the graph view is the best way
 	- BGP
 		- BGP primary notes
 			- [[Routing/BGP/BGP primary notes/BGP primary notes|BGP primary notes]]
+	- IS-IS
+	- OSPF
 - VyOS
 	- VyOS CLI Syntax
 		- [[VyOS/VyOS CLI Syntax/VyOS CLI Syntax|VyOS CLI Syntax]]
