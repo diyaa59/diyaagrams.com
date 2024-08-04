@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "41859b57b3dfe880",
+        "id": "ea5e7d25235f9cd8",
         "type": "tabs",
         "children": [
           {
-            "id": "8981ed2456392fbc",
+            "id": "afa6b23b5baafa7d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "index.md"
+              }
             }
           }
         ]
@@ -138,7 +142,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8981ed2456392fbc",
+  "active": "4d3382887d0418d9",
   "lastOpenFiles": [
     "index.md",
     "NAIT-NET-labs/NAIT-NET-Labs.md",

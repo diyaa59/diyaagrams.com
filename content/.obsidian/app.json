@@ -1,7 +1,7 @@
 {
   "defaultViewMode": "preview",
   "newLinkFormat": "absolute",
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "newFileLocation": "root",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./Attachments",
