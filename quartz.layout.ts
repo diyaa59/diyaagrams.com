@@ -33,6 +33,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.Explorer(),
     Component.Backlinks(),
+    Component.RecentNotes({
+      title: "Recent writing",
+      limit: 5,
+    }),
   ],
 }
 
@@ -51,5 +55,9 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [
     Component.Explorer(),
+    Component.RecentNotes({
+      title: "Recent writing",
+      limit: 5,
+    }),
   ],
 }
