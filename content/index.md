@@ -56,6 +56,7 @@ The explorer section on the right hand side under the graph view is the best way
 - WireGuard
 	- WireGuard General Documentation
 		- [[WireGuard/WireGuard General Documentation/Wireguard Configuration General Documentation|Wireguard Configuration General Documentation]]
+- Wireshark
 - [[index|Home Page]]
 
 # About Me:

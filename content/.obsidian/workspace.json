@@ -146,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "afa6b23b5baafa7d",
+  "active": "4d3382887d0418d9",
   "lastOpenFiles": [
+    "Wireshark",
     "Attachments/Pasted image 20240804030523.png",
     "Attachments",
     "Routing/IS-IS",
@@ -165,7 +166,6 @@
     "Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221212809.png",
     "Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221212102.png",
     "Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20231221185354.png",
-    "Routing/BGP/BGP-primary-notes/Attachments/BGP-Labs-diagrams.drawio.svg",
     "Routing/BGP/BGP-primary-notes/BGP-Labs-diagrams.drawio",
     "Routing/BGP/BGP-primary-notes/Attachments",
     "Routing/BGP/BGP-primary-notes",
