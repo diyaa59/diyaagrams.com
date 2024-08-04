@@ -32,11 +32,11 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph(),
     Component.Explorer(),
-    Component.Backlinks(),
     Component.RecentNotes({
       title: "Recent writing",
       limit: 3,
     }),
+    Component.Backlinks(),
   ],
 }
 
@@ -54,10 +54,10 @@ export const defaultListPageLayout: PageLayout = {
     Component.Darkmode(),
   ],
   right: [
-    Component.Explorer(),
     Component.RecentNotes({
       title: "Recent writing",
       limit: 3,
     }),
+    Component.Explorer(),
   ],
 }
