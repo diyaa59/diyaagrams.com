@@ -14,6 +14,13 @@ This website is mostly a way for me to share my documentation out of Obsidian on
 
 You might be wondering why the name of this website is `diyaagrams.com`? I love diagrams and some of my diagrams have been called "diyaagrams" a few times. Therefore, I thought it would be a good idea for me to publish my "diyaagrams" on `diyaagrams.com` 😉.
 
+## Obsidian Offline Vault:
+
+
+![[Attachments/Pasted image 20240804030523.png]]
+
+This screenshot above shows how many notes I have in my offline Obsidian notes 😊. My goal is to publish most of the contents in that vault on this website.
+
 ## Site Components Layout:
 
 The explorer section on the right hand side under the graph view is the best way to see all the contents of this site on desktop devices. The explorer view can be found in the bottom right section on mobile devices.
