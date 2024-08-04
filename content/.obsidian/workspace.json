@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9cac5a4455b5d389",
+        "id": "41859b57b3dfe880",
         "type": "tabs",
         "children": [
           {
-            "id": "ace7c8efb2df6d2a",
+            "id": "8981ed2456392fbc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "index.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +138,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ace7c8efb2df6d2a",
+  "active": "8981ed2456392fbc",
   "lastOpenFiles": [
-    "NAIT-NET-labs/NAIT-NET-Labs.md",
     "index.md",
+    "NAIT-NET-labs/NAIT-NET-Labs.md",
     "Routing/BGP/BGP-primary-notes/BGP-primary-notes.md",
     "Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20240803110323.png",
     "Cloudflare/DDNS-Cloudflare-Bash-Documentation/DDNS-Cloudflare-bash.md",
