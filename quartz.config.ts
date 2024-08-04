@@ -11,9 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Diyaagrams.com",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "null",
-    },
+    analytics: null,
     locale: "en-US",
     baseUrl: "diyaagrams.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
