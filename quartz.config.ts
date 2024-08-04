@@ -8,13 +8,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Diyaagrams.com",
+    pageTitle: "diyaagrams.com",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
     baseUrl: "diyaagrams.com",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
