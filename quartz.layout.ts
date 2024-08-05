@@ -11,6 +11,7 @@ export const sharedPageComponents: SharedLayout = {
       title: "Recent writing:",
       limit: 3,
     }),
+    Component.Spacer(),
   ],
   footer: Component.Footer({
     links: {
