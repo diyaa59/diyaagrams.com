@@ -7,6 +7,19 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Spacer(),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'diyaa59/diyaagrams.com',
+        // from data-repo-id
+        repoId: 'R_kgDOMesk5g',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDOMesk5s4Cha9H',
+      }
+    }),
     Component.RecentNotes({
       title: "Recent writing:",
       limit: 5,
