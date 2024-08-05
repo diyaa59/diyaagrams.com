@@ -23,8 +23,7 @@ This screenshot above shows how many notes I have in my offline Obsidian notes ð
 
 ## Site Components Layout:
 
-The explorer section on the right hand side under the graph view is the best way to see all the contents of this site on desktop devices. The explorer view can be found in the bottom right section on mobile devices.
-
+The explorer section at the bottom of the page is the best way to see all the contents directory of this site. Scroll to the bottom of the page to see the section with the title "Explorer".
 ## Site Pages Layout:
 
 > [!Note]
