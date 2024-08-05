@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.Spacer(),
     Component.RecentNotes({
       title: "Recent writing:",
-      limit: 3,
+      limit: 5,
     }),
     Component.Spacer(),
   ],
