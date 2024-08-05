@@ -7,6 +7,13 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Spacer(),
+    Component.Explorer(),
+    Component.Spacer(),
+    Component.RecentNotes({
+      title: "Recent Notes Published:",
+      limit: 5,
+    }),
+    Component.Spacer(),
     Component.Comments({
       provider: 'giscus',
       options: {
@@ -19,13 +26,6 @@ export const sharedPageComponents: SharedLayout = {
         // from data-category-id
         categoryId: 'DIC_kwDOMesk5s4Cha9H',
       }
-    }),
-    Component.Spacer(),
-    Component.Explorer(),
-    Component.Spacer(),
-    Component.RecentNotes({
-      title: "Recent Notes Published:",
-      limit: 5,
     }),
     Component.Spacer(),
   ],
