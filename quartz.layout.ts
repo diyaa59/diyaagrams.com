@@ -20,6 +20,7 @@ export const sharedPageComponents: SharedLayout = {
         categoryId: 'DIC_kwDOMesk5s4Cha9H',
       }
     }),
+    Component.Spacer(),
     Component.RecentNotes({
       title: "Recent writing:",
       limit: 5,
