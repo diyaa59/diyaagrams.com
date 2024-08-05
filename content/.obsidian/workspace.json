@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "af35bd8d5320ccb0",
+        "id": "23a44181b6918c3e",
         "type": "tabs",
         "children": [
           {
-            "id": "2b913ef36f929afa",
+            "id": "a7d96df186021628",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2b913ef36f929afa",
+  "active": "a7d96df186021628",
   "lastOpenFiles": [
     "Routing/BGP/BGP primary notes/BGP primary notes.md",
     "index.md",
