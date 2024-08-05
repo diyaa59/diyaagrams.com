@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "Routing/BGP/BGP primary notes/BGP primary notes.md"
               }
             }
           }
@@ -146,14 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4d3382887d0418d9",
+  "active": "afa6b23b5baafa7d",
   "lastOpenFiles": [
+    "index.md",
     "Wireshark",
     "Attachments/Pasted image 20240804030523.png",
     "Attachments",
     "Routing/IS-IS",
     "Routing/OSPF",
-    "index.md",
     "NAIT-NET-labs/NAIT-NET-Labs.md",
     "Routing/BGP/BGP-primary-notes/BGP-primary-notes.md",
     "Routing/BGP/BGP-primary-notes/Attachments/Pasted image 20240803110323.png",
@@ -176,7 +176,6 @@
     "Routing/BGP",
     "Routing",
     "Proxmox",
-    "WireGuard-Pfsense-Policy-Based-Routing/Diagram/Policy-Based-Routing-With-Pfsense-over-WireGuard.drawio",
     "WireGuard-Pfsense-Policy-Based-Routing/WireGuard-Pfsense-policy-based-routing.md",
     "WireGuard-Pfsense-Policy-Based-Routing/README.md",
     "DDNS-Cloudflare-Bash-Documentation/DDNS-Cloudflare-bash.md",
