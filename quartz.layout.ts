@@ -21,12 +21,12 @@ export const sharedPageComponents: SharedLayout = {
       }
     }),
     Component.Spacer(),
+    Component.Explorer(),
+    Component.Spacer(),
     Component.RecentNotes({
-      title: "Recent writing:",
+      title: "Recent Notes Published:",
       limit: 5,
     }),
-    Component.Spacer(),
-    Component.Explorer(),
     Component.Spacer(),
   ],
   footer: Component.Footer({
