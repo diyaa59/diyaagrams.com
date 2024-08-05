@@ -9,6 +9,7 @@ date: 2024-08-03
 # Overview:
 
 Author: Diyaa Alkanakre.
+
 Last updated: December 25th, 2023.
 
 This document will outline the theory behind how BGP operates. I plan on having all of my BGP notes in single document for ease of access/use.
