@@ -26,6 +26,8 @@ export const sharedPageComponents: SharedLayout = {
       limit: 5,
     }),
     Component.Spacer(),
+    Component.Explorer(),
+    Component.Spacer(),
   ],
   footer: Component.Footer({
     links: {
@@ -47,7 +49,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.Darkmode(),
-    Component.MobileOnly(Component.Spacer()),
+    Component.Spacer(),
     Component.Search(),
   ],
   right: [
@@ -66,11 +68,10 @@ export const defaultListPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
+    Component.Spacer(),
     Component.Search(),
     Component.Darkmode(),
   ],
   right: [
-    Component.Explorer(),
   ],
 }
