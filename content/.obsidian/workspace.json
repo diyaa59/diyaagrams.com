@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "23a44181b6918c3e",
+        "id": "5b8c1513d1444687",
         "type": "tabs",
         "children": [
           {
-            "id": "a7d96df186021628",
+            "id": "bc59160c70bd35cd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "index.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a7d96df186021628",
+  "active": "bc59160c70bd35cd",
   "lastOpenFiles": [
     "Routing/BGP/BGP primary notes/BGP primary notes.md",
     "index.md",

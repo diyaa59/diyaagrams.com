@@ -462,10 +462,10 @@ Pick up here [video URL copied with pick up time | `1:21:11`](https://youtu.be/S
 
 # References:
 
-## Unreferenced links:
+## Indirectly referenced links:
 
 -  [The Basics of BGP: Border Gateway Protocol Explained | CBT Nuggets | Video](https://youtu.be/4e3E5sjItWM?list=PLyt5OhlhlmJUGZ9kM45QWX5ZrCLoXVQXD)
--  [[AS) Number Space | RFC6793 | Document](https://www.rfc-editor.org/rfc/rfc6793|BGP support for four-octet Autonomous System (AS) Number Space | RFC6793 | Document]]
+-  [[https://www.rfc-editor.org/rfc/rfc6793 | BGP support for four-octet Autonomous System (AS) Number Space]] 
 -  [A Border Gateway Protocol 4 | RFC4271 | Document](https://www.rfc-editor.org/rfc/rfc4271)
 -  [Micro Nugget: BGP Configuration Explained | CBT Nugget | Video | Keith Barker](https://youtu.be/XRetkD4UUL4?list=PLyt5OhlhlmJUGZ9kM45QWX5ZrCLoXVQXD)
 - [BGP session establishment | PacketPushers | article](https://packetpushers.net/demystifying-bgp-session-establishments/)
