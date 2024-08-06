@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5b8c1513d1444687",
+        "id": "853304a264c4cc6f",
         "type": "tabs",
         "children": [
           {
-            "id": "bc59160c70bd35cd",
+            "id": "c23a1c34e2b67fa3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,8 +138,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc59160c70bd35cd",
+  "active": "c23a1c34e2b67fa3",
   "lastOpenFiles": [
+    "tags/index.md",
     "Routing/BGP/BGP primary notes/BGP primary notes.md",
     "index.md",
     "Wireshark",
