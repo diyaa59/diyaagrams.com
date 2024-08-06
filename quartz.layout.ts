@@ -7,7 +7,21 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Spacer(),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "Site Directory:", // title of the explorer component
+      filterFn: undefined, // apply no filter function, every file and folder will visible
+      mapFn: (node) => {
+        // dont change name of root node
+        if (node.depth > 0) {
+          // set emoji for file/folder
+          if (node.file) {
+            node.displayName = "📜 " + node.displayName
+          } else {
+            node.displayName = "📁 " + node.displayName
+          }
+        }
+      },
+    }),
     Component.Spacer(),
     Component.RecentNotes({
       title: "Recent Notes Published/Modified:",
@@ -33,6 +47,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       "GitHub": "https://github.com/diyaa59",
       "Linkedin": "https://www.linkedin.com/in/diyaa-alkanakre/",
+      "Homepage": "https://diyaagrams.com/",
     },
   }),
 }

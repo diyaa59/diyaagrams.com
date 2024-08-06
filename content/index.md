@@ -23,7 +23,8 @@ This screenshot above shows how many notes I have in my offline Obsidian notes ð
 
 ## Site Components Layout:
 
-The explorer section at the bottom of the page is the best way to see all the contents directory of this site. Scroll to the bottom of the page to see the section with the title "Explorer".
+The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title "Site Directory:".
+
 ## Site Pages Layout:
 
 > [!Note]
