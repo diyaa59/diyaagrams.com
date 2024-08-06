@@ -28,6 +28,8 @@ The explorer section at the bottom of the page is the best way to see all the co
 
 > [!Note]
 > If a folder does not appear in the explorer view, it is likely because the folder does not exist yet.
+> 
+> The page [[tags/|tags]] contains all the tags attached to notes on this site.
 
 - Cisco
 - Cloudflare
