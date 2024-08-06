@@ -57,6 +57,9 @@ sudo sysctl -p
 
 Place the config below in the following file `/etc/nftables.conf`.
 
+> [!Danger] Warning:
+> I would recommend you avoid using the default WireGuard port. In the event there is a WireGuard exploit in the future someone could run it against all public IPs on the default port. The WireGuard default port is `51820`
+
 > [!IMPORTANT]
 > 
 > Change the following parameters to meet your needs:.
@@ -83,7 +86,7 @@ define Local_Networks = { 10.0.0.0/8 }
 # SSH port
 define SSH_In_Port = 22
 # WAN inbound Wireguard port
-define WireGuard_In_Port = 51820
+define WireGuard_In_Port = 60000
 # MSS override
 # Note: This is assuming that you are using an MTU value of 1420 on the WireGuard tunnel interface.
 define IPv4_DEV_WireGuard_MSS = 1380
@@ -186,11 +189,14 @@ echo "Preshared Key: ${PRESHARED_KEY}"
 
 VPS WireGuard configuration:
 
+> [!Warning] Important:
+>  The nftables ruleset in this guide has the WireGuard port set to `60000`. You need to match your [[#Nftables ruleset|nftables]] ruleset value with the value in the configuration below. The value in the configuration below is named `ListenPort = 60000`.
+
 ```bash
 [Interface]
 # Name = VPS interface settings
 Address = 198.51.100.1/30
-ListenPort = 51820
+ListenPort = 60000
 PrivateKey = localPrivateKeyAbcAbcAbc= 
 MTU = 1420 
 
@@ -233,8 +239,11 @@ Create a new WireGuard tunnel on Pfsense:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020340.png]]
 
-> [!IMPORTANT]
->  Add the `Pfsense private key` you generated in a previous step and assign the tunnel IP address.
+> [!warning] Important:
+>  Add the `Pfsense private key` you generated in [[#Generate WireGuard keys|this step]] and assign the tunnel IP address.
+
+> [!warning] Important:
+> The `Listen Port` needs to match the WireGuard port configured in the [[#Nftables ruleset | nftables]] ruleset.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020652.png]]
 
