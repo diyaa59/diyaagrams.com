@@ -1,6 +1,5 @@
 ---
 title: Cloudflare DDNS bash script
-Author: Diyaa Alkanakre
 tags:
   - Cloudflare
   - DDNS

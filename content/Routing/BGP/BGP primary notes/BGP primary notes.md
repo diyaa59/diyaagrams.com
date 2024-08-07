@@ -1,9 +1,8 @@
 ---
+title: BGP notes
 tags:
   - BGP
   - routing
-Author: Diyaa Alkanakre
-title: BGP notes
 date: 2024-08-03
 ---
 # Overview:

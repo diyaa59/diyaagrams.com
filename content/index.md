@@ -1,6 +1,5 @@
 ---
 title: Home Page
-Author: Diyaa Alkanakre
 tags:
   - Main-Page
 date: 2024-08-04

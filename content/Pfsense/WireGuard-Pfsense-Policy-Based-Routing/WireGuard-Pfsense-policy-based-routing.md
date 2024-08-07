@@ -1,6 +1,5 @@
 ---
 title: Pfsense WireGuard tunnels policy-based routing
-Author: Diyaa Alkanakre
 tags:
   - Pfsense
   - WireGuard
