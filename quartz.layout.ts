@@ -26,6 +26,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.RecentNotes({
       title: "Recent Notes Published/Modified:",
       limit: 5,
+      showTags: true,
     }),
     Component.Spacer(),
     Component.Comments({
