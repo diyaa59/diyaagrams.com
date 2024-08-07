@@ -13,6 +13,10 @@ This website is mostly a way for me to share my documentation out of Obsidian on
 
 You might be wondering why the name of this website is `diyaagrams.com`? I love diagrams and some of my diagrams have been called "diyaagrams" a few times. Therefore, I thought it would be a good idea for me to publish my "diyaagrams" on `diyaagrams.com` 😉.
 
+## Site Components Layout:
+
+The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title "Site Directory:".
+
 ## Obsidian Offline Vault:
 
 
@@ -20,45 +24,22 @@ You might be wondering why the name of this website is `diyaagrams.com`? I love 
 
 This screenshot above shows how many notes I have in my offline Obsidian notes 😊. My goal is to publish most of the contents in that vault on this website.
 
-## Site Components Layout:
+# Pages Highlights:
 
-The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title "Site Directory:".
+> [!note]
+> This section only highlights some pages that are worth linking on the main page 😉.
 
-## Site Pages Layout:
+[[NAIT-NET-labs/NAIT-NET-Labs|NAIT NET Labs]] - This page contains diagrams of networks I worked on during my studies in the Network Engineering Technology (NET) program at the Northern Alberta Institute of Technology (NAIT.)
 
-> [!Note]
-> If a folder does not appear in the explorer view, it is likely because the folder does not exist yet.
-> 
-> The page [[tags/|tags]] contains all the tags attached to notes on this site.
+[[WireGuard/WireGuard General Documentation/Wireguard Configuration General Documentation|WireGuard General Documentation]] - This page has general WireGuard config generation information.
 
-- Cisco
-- Cloudflare
-	- DDNS Cloudflare Bash Documentation
-		- [[Cloudflare/DDNS Cloudflare Bash Documentation/DDNS Cloudflare bash|DDNS Cloudflare bash]]
-- Diyaagrams
-- Lets-Encrypt
-	- Let's Encrypt DNS P12 cert
-		- [[Lets-Encrypt/Lets Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]]
-- NAIT-NET-Labs
-	- [[NAIT-NET-labs/NAIT-NET-Labs|NAIT-NET-Labs]]
-- Pfsense
-	- WireGuard-Pfsense-Policy-Based-Routing
-		- [[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/WireGuard-Pfsense-policy-based-routing|WireGuard-Pfsense-policy-based-routing]]
-- Proxmox
-- Routing
-	- BGP
-		- BGP primary notes
-			- [[Routing/BGP/BGP primary notes/BGP primary notes|BGP primary notes]]
-	- IS-IS
-	- OSPF
-- VyOS
-	- VyOS CLI Syntax
-		- [[VyOS/VyOS CLI Syntax/VyOS CLI Syntax|VyOS CLI Syntax]]
-- WireGuard
-	- WireGuard General Documentation
-		- [[WireGuard/WireGuard General Documentation/Wireguard Configuration General Documentation|Wireguard Configuration General Documentation]]
-- Wireshark
-- [[index|Home Page]]
+[[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/WireGuard-Pfsense-policy-based-routing|Pfsense Policy Based Routing over WireGuard]] - This page explains how to configure policy based routing on Pfsense over WireGuard tunnels.
+
+[[Routing/BGP/BGP primary notes/BGP primary notes|BGP Theory Notes]] - My BGP notes.
+
+[[Diyaagrams/Network-diagrams-collection|Network Diyaagrams]] - A collection of my network diagrams.
+
+[[Wireshark/Filter-3-way-TCP-handshake-packets-only/Filter-3-Way-TCP-handshake|Wireshark - filter TCP handshake packets]] - This article is about filtering only the TCP handshake of every TCP stream.
 
 # About Me:
 
@@ -67,23 +48,6 @@ My name is Diyaa Alkanakre. I like to spend majority of my personal time making 
 Linkedin: [Diyaa Alkanakre](https://www.linkedin.com/in/diyaa-alkanakre/)
 
 Github: [diyaa59](https://github.com/diyaa59)
-
-# Pages Highlights:
-
-> [!note]
-> This section only highlights some pages that are worth linking on the main page 😉.
-
-[[NAIT-NET-labs/NAIT-NET-Labs]] - This page contains diagrams of networks I worked on during my studies in the Network Engineering Technology (NET) program at the Northern Alberta Institute of Technology (NAIT.)
-
-[[WireGuard/WireGuard General Documentation/Wireguard Configuration General Documentation]] - This page has general WireGuard config generation information.
-
-[[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/WireGuard-Pfsense-policy-based-routing]] - This page explains how to configure policy based routing on Pfsense over WireGuard tunnels.
-
-[[VyOS/VyOS CLI Syntax/VyOS CLI Syntax|VyOS CLI Syntax]] - This page has general command line syntax commands of VyOS router.
-
-[[Lets-Encrypt/Lets Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]] - This page explains how to generate a lets encrypt certificate with DNS validation.
-
-[[Routing/BGP/BGP primary notes/BGP primary notes|BGP primary notes]] - My BGP notes.
 
 
 
