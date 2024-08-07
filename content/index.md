@@ -39,7 +39,7 @@ The "Site Directory:" section at the bottom of the page is the best way to see a
 - Diyaagrams
 - Lets-Encrypt
 	- Let's Encrypt DNS P12 cert
-		- [[Lets-Encrypt/Let's Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]]
+		- [[Lets-Encrypt/Lets Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]]
 - NAIT-NET-Labs
 	- [[NAIT-NET-labs/NAIT-NET-Labs|NAIT-NET-Labs]]
 - Pfsense
@@ -82,7 +82,7 @@ Github: [diyaa59](https://github.com/diyaa59)
 
 [[VyOS/VyOS CLI Syntax/VyOS CLI Syntax|VyOS CLI Syntax]] - This page has general command line syntax commands of VyOS router.
 
-[[Lets-Encrypt/Let's Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]] - This page explains how to generate a lets encrypt certificate with DNS validation.
+[[Lets-Encrypt/Lets Encrypt DNS P12 cert/let's encrypt p12 cert|let's encrypt p12 cert]] - This page explains how to generate a lets encrypt certificate with DNS validation.
 
 [[Routing/BGP/BGP primary notes/BGP primary notes|BGP primary notes]] - My BGP notes.
 
