@@ -1,6 +1,5 @@
 ---
 title: How to filter TCP handshake packets
-Author: Diyaa Alkanakre
 date: 2024-08-06
 tags:
   - Wireshark
@@ -10,6 +9,7 @@ tags:
 This document explains how to filter only the TCP handshake packets of every TCP streams in a PCAP file with Wireshark.
 
 I used the answer in the Wireshark forums link referenced here [^1].
+
 # Filters:
 
 IPv4 filter:

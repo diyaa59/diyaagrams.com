@@ -52,7 +52,10 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
-      Plugin.FrontMatter(),
+      Plugin.FrontMatter({
+        delimiters: "---",
+        language: "yaml",
+      }),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
