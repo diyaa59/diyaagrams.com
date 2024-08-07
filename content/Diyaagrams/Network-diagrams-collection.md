@@ -102,7 +102,7 @@ This was a proof of concept for the capstone project (PROJ2000) in the Network E
 ![[Diyaagrams/svgs/StarWind-vSAN-Hyperconverged_2_ESXi_Nodes/Starwind_2_Nodes_Cluster.drawio.svg]]
 
 ---
-# VyOS Routing:
+## VyOS Routing:
 
 This lab was to learn more about the [[https://vyos.io/|VyOS router]] for more advanced labs in the future. VyOS has multiple advanced routing protocols which makes it the best open-source router for learning routing.
 
