@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.Spacer(),
     Component.Explorer({
       title: "Site Directory:", // title of the explorer component
-      filterFn: undefined, // apply no filter function, every file and folder will visible
+      // filterFn: undefined, // apply no filter function, every file and folder will visible
       mapFn: (node) => {
         // dont change name of root node
         if (node.depth > 0) {
