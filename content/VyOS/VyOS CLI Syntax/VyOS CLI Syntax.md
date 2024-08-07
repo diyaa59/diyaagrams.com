@@ -1,11 +1,14 @@
 ---
-Author: Diyaa Alkanakre
+title: VyOS Router CLI Syntax
 tags:
   - VyOS
-title: VyOS general CLI syntax
 date: 2024-08-03
 ---
 # Overview:
+
+Author: Diyaa Alkanakre<br>
+Published date: August 3rd, 2024<br>
+Last updated: August 3rd, 2024<br>
 
 This document outlines the CLI system configuration on VyOS operating system.
 

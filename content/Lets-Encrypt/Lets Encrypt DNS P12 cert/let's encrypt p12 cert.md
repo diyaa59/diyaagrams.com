@@ -5,9 +5,12 @@ tags:
   - Certificates
   - TLS
 date: 2024-08-03
-Author: Diyaa Alkanakre
 ---
 # Overview:
+
+Author: Diyaa Alkanakre<br>
+Published date: August 3rd, 2024<br>
+Last updated: August 3rd, 2024<br>
 
 This repository explains how to get a free valid and publicly signed certificate (`p12`) from Let's Encrypt by using their `certbot` script. The example I have below is using the `certbot` DNS challenge extension to generate the certificate.
 
@@ -38,11 +41,11 @@ sudo certbot certonly --manual --manual-auth-hook /etc/letsencrypt/acme-dns-auth
 
 You will see the following message asking you to add a `CNAME` record to your zone.
 
-![[Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted image 20240418152031.png]]
+![[Lets-Encrypt/Lets Encrypt DNS P12 cert/Attachments/Pasted image 20240418152031.png]]
 
 Add the `CNAME` record and wait for about 60 seconds before hitting enter. You can visit [https://nslookup.io](https://nslookup.io) to validate that your record propagated world wide.
 
-![[Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted image 20240418152254.png]]
+![[Lets-Encrypt/Lets Encrypt DNS P12 cert/Attachments/Pasted image 20240418152254.png]]
 
 > [!info]
 > There is more information about each certificate file/extension format in the following file `/etc/letsencrypt/live/<domain-name>/README`.
@@ -61,7 +64,7 @@ You will see the output in the screenshot shown above if the certificate request
 openssl version
 ```
 
-![[Lets-Encrypt/Let's-Encrypt-DNS-P12-cert/Attachments/Pasted image 20240418154612.png]]
+![[Lets-Encrypt/Lets Encrypt DNS P12 cert/Attachments/Pasted image 20240418154612.png]]
 
 ## OpenSSL version 1.1.x:
 

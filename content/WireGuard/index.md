@@ -1,5 +1,5 @@
 ---
-title: BGP Theory Notes
+title: WireGuard
 tags:
   - Folder-index
 ---

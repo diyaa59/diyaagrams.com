@@ -1,5 +1,5 @@
 ---
-title: BGP Theory Notes
+title: BGP
 tags:
   - Folder-index
 ---

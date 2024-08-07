@@ -1,5 +1,5 @@
 ---
-title: BGP Theory Notes
+title: OSPF Theory
 tags:
   - Folder-index
 ---

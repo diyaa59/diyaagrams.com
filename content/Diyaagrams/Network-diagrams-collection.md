@@ -4,10 +4,14 @@ tags:
   - diyaagrams
   - network-documentation
   - homelab
-Author: Diyaa Alkanakre
 date: 2024-08-06
 ---
 # Overview:
+
+Author: Diyaa Alkanakre<br>
+Published date: August 6th, 2024<br>
+Last updated: August 6th, 2024<br>
+
 
 This page contains multiple diagrams that I have created in the past. I will continue to add more diagrams to this page as I find them in my offline Obsidian vault (There are some that I didn't even know I made. I have over 3000 files in my Obsidian vault 🙂).
 

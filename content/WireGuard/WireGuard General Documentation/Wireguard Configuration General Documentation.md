@@ -1,11 +1,17 @@
 ---
 tags:
   - WireGuard
-Author: Diyaa Alkanakre
 title: WireGuard general documentation
-date: 2024-08-06
-description: Wireshark - Filtering TCP handshake packets.
+date: 2024-08-03
 ---
+# Overview:
+
+Author: Diyaa Alkanakre<br>
+Published date: August 3rd, 2024<br>
+Last updated: August 3rd, 2024<br>
+
+This article contains all of the WireGuard documentations I have made for myself. I use WireGuard heavily in my homelab network for Site to Site (S2S) and remote access VPNs.
+
 # Wireguard configuration generation:
 
 ## Keys generation:

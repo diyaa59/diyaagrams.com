@@ -1,5 +1,5 @@
 ---
-title: BGP Theory Notes
+title: Proxmox
 tags:
   - Folder-index
 ---

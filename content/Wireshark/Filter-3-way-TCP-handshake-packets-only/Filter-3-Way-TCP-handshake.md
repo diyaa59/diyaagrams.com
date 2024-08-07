@@ -1,14 +1,18 @@
 ---
-title: How to filter TCP handshake packets
+title: Filter TCP handshake packets
 tags:
   - Wireshark
 date: 2024-08-06
 ---
 # Overview:
 
+Author: Diyaa Alkanakre<br>
+Published date: August 6th, 2024<br>
+Last updated: August 6th, 2024<br>
+
 This document explains how to filter only the TCP handshake packets of every TCP streams in a PCAP file with Wireshark.
 
-I used the answer in the Wireshark forums link referenced here [^1].
+I used the answer in the Wireshark forums link referenced here [^1] under [[#References]].
 
 # Filters:
 

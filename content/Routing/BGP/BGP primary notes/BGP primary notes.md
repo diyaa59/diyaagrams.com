@@ -3,14 +3,13 @@ title: BGP notes
 tags:
   - BGP
   - routing
-date: 2024-08-03
-Author: Diyaa Alkanakre
+date: 2024-08-05
 ---
 # Overview:
 
-Author: Diyaa Alkanakre.
-
-Last updated: December 25th, 2023.
+Author: Diyaa Alkanakre<br>
+Published date: August 5th, 2024<br>
+Last updated: August 5th, 2024<br>
 
 This document will outline the theory behind how BGP operates. I plan on having all of my BGP notes in single document for ease of access/use.
 

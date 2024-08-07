@@ -1,5 +1,5 @@
 ---
-title: BGP Theory Notes
+title: Obsidian Templates
 tags:
   - Folder-index
 ---

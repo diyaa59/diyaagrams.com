@@ -7,28 +7,12 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Spacer(),
-    Component.Explorer({
-      title: "Site Directory:", // title of the explorer component
-      // filterFn: undefined, // apply no filter function, every file and folder will visible
-      mapFn: (node) => {
-        // dont change name of root node
-        if (node.depth > 0) {
-          // set emoji for file/folder
-          if (node.file) {
-            node.displayName = "📜 " + node.displayName
-          } else {
-            node.displayName = "📁 " + node.displayName
-          }
-        }
-      },
-    }),
-    Component.Spacer(),
-    Component.RecentNotes({
-      title: "Recent Notes Published/Modified:",
-      limit: 4,
-      showTags: false,
-    }),
-    Component.Spacer(),
+    Component.Backlinks(),
+    //Component.RecentNotes({ 
+    //  title: "Recent Notes Published/Modified:",
+    //  limit: 5,
+    //  showTags: false,
+    //}),
     Component.Comments({
       provider: 'giscus',
       options: {
@@ -58,7 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
-    Component.ContentMeta(),
+    // Component.ContentMeta(),
     Component.TagList(),
     Component.TableOfContents(),
   ],
@@ -70,7 +54,22 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph(),
-    Component.Backlinks(),
+    Component.Spacer(),
+    Component.Explorer({
+      title: "Site Directory:", // title of the explorer component
+      // filterFn: undefined, // apply no filter function, every file and folder will visible
+      mapFn: (node) => {
+        // dont change name of root node
+        if (node.depth > 0) {
+          // set emoji for file/folder
+          if (node.file) {
+            node.displayName = "📜 " + node.displayName
+          } else {
+            node.displayName = "📁 " + node.displayName
+          }
+        }
+      },
+    }),
   ],
 }
 
@@ -78,15 +77,35 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
+    Component.Spacer(),
     Component.ArticleTitle(),
+    Component.Spacer(),
     Component.ContentMeta()
   ],
   left: [
     Component.PageTitle(),
     Component.Spacer(),
     Component.Search(),
+    Component.Spacer(),
     Component.Darkmode(),
   ],
   right: [
+    Component.Graph(),
+    Component.Spacer(),
+    Component.Explorer({
+      title: "Site Directory:", // title of the explorer component
+      // filterFn: undefined, // apply no filter function, every file and folder will visible
+      mapFn: (node) => {
+        // dont change name of root node
+        if (node.depth > 0) {
+          // set emoji for file/folder
+          if (node.file) {
+            node.displayName = "📜 " + node.displayName
+          } else {
+            node.displayName = "📁 " + node.displayName
+          }
+        }
+      },
+    }),
   ],
 }

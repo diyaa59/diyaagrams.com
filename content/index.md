@@ -15,6 +15,9 @@ You might be wondering why the name of this website is `diyaagrams.com`? I love 
 
 ## Site Components Layout:
 
+> [!Note]
+> Some of the folders are still empty as I haven't published notes to them yet.
+
 The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title "Site Directory:".
 
 ## Obsidian Offline Vault:
