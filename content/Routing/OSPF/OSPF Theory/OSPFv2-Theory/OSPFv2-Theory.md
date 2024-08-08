@@ -12,9 +12,9 @@ Published date: August 7th, 2024<br>
 Last updated: August 7th, 2024<br>
 
 >[!warning]
->You are reading an incomplete draft.
+>You are reading an incomplete article. This is a draft.
 
-This is my personal notes on OSPFv2. I graduated from the Network Engineering Technology ([[https://www.nait.ca/programs/network-engineering-technology|NET]]) at the Northern Institute of Alberta ([[https://www.nait.ca/nait/home|NAIT]]) in 2023. I fell in love with routing after attending the classes of [[https://www.linkedin.com/in/scottempson/|Scott Empson]] and [[https://www.linkedin.com/in/monica-ciobanu-61649517/|Monica Ciobanu]] at NAIT.
+This is my personal notes on OSPFv2. I graduated from the Network Engineering Technology ([[https://www.nait.ca/programs/network-engineering-technology|NET]]) program at the Northern Institute of Alberta ([[https://www.nait.ca/nait/home|NAIT]]) in 2023. I fell in love with routing after attending the classes of [[https://www.linkedin.com/in/scottempson/|Scott Empson]] and [[https://www.linkedin.com/in/monica-ciobanu-61649517/|Monica Ciobanu]] at NAIT.
 
 This article will have my personal knowledge and notes of OSPFv2. Oh, I forgot one more thing... I will have to warn you that I have a sense of humor and English is not my first language  🙂. I enjoy writing technical documentation and that is why I am spending my personal time writing this 🙂. I lied, that wasn't the last thing I was going to say.... looking at emojis when writing my notes makes me think better 🙂. Therefore, the emojis aren't going away anytime soon 🙃.
 
