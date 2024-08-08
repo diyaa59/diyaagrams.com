@@ -18,9 +18,18 @@ You might be wondering why the name of this website is `diyaagrams.com`? I love 
 > [!Note]
 > Some of the folders are still empty as I haven't published notes to them yet.
 
-The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title "Site Directory:".
+### Desktop view:
 
-You can also use the search bar on the left to run a complete search (This will search the every word on this site 🙂) on the site contents.
+The "Site Directory:" section on the right side of the page is the best way to see all the contents of this site.
+
+You can also use the search bar on the left to run a complete search (This will search the every word on this site 🙂) on the contents of the site.
+
+### Mobile view:
+
+The "Site Directory:" section at the bottom of the page is the best way to see all the contents of this site. Scroll to the bottom of the page to see the section with the title of "Site Directory:".
+
+You can also use the search bar at the top of the page to run a complete search (This will search the every word on this site 🙂) on the contents of the site.
+
 
 ## Obsidian Offline Vault:
 
