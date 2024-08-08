@@ -4,12 +4,14 @@ tags:
   - BGP
   - routing
 date: 2024-08-05
+aliases:
+  - A1
 ---
 # Overview:
 
 Author: Diyaa Alkanakre<br>
-Published date: August 5th, 2024<br>
-Last updated: August 5th, 2024<br>
+Published date: August 7th, 2024<br>
+Last updated: August 7th, 2024<br>
 
 This document will outline the theory behind how BGP operates. I plan on having all of my BGP notes in single document for ease of access/use.
 
@@ -202,6 +204,7 @@ Asdot is combines the presentation of asplain and asdot+. The ASNs that fit in t
 > [!important]
 > - Administrative distance indicate the trust worthiness of a routing.
 > - **==The lower the administrative distance the more trust worthy the routing protocol.==**
+> - The administrative distance showing below is for Cisco IOS. Some other vendors choose to implement administrative distance differently.
 
 | Routing source | Administrative distance |
 | --- | --- |
