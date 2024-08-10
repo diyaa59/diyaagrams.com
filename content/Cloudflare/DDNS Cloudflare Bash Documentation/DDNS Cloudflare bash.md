@@ -12,9 +12,9 @@ Published date: August 3rd, 2024<br>
 Last updated: August 3rd, 2024<br>
 
 
-This document explains how to use the DDNS-Cloudflare-bash script to dynamically update DDNS with CloudFlare using API keys. I am using a bash script from this public Github repository [DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash). This repository is simply the documentation of how to use the script in the [DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash) repository. 
+This document explains how to use the DDNS-Cloudflare-bash script to dynamically update DDNS with CloudFlare using API keys. I am using a bash script from this public Github repository [DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash). This article is simply the documentation of how to use the script in the [DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash) repository. 
 
-I am using this script to update a FQDN DNS record automagically through crontab on multiple Linux virtual private servers in different cloud regions.
+I am using this script to update an FQDN DNS record automagically through crontab on multiple Linux virtual private servers in different cloud regions.
 
 > [!warning]
 > I am using a TTL of `120` seconds on the FQDN record. You might see this TTL value as low. Feel free to change it when modifying the script variables.
@@ -34,10 +34,10 @@ Navigate to the DNS zone records:
 Create the record you wish to modify with DDNS (the record must exist before using it with the script):
 
 > [!note]
-> You can add an invalid IP or a documentation IP in the type A record. Example: 198.51.100.1 (documentation range IP).
+> You can add an invalid IP or a documentation IP in the type A record to start with. Example: 198.51.100.1 (documentation range IP).
 > Tip: Do not try to resolve the record before it updates.
 
-![[Cloudflare/DDNS Cloudflare Bash Documentation/Attachments/Pasted image 20240406162203.png]]]
+![[Cloudflare/DDNS Cloudflare Bash Documentation/Attachments/Pasted image 20240406162203.png]]
 
 Get the zone id from cloudflare:
 
@@ -84,7 +84,7 @@ Switch to the new user:
 sudo su cloudflare-ddns
 ```
 
-Install the script in the non-privileged user directory:
+Install the script in the non-privileged user directory by pasting the command below into the command line:
 
 ```bash
 mkdir $HOME/cloudflare-ddns/; cd $HOME/cloudflare-ddns/; \
