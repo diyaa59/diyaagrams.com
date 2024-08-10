@@ -139,6 +139,10 @@ Save the crontab and exit from the user account:
 exit
 ```
 
+# Related Notes:
+
+- Link to [[index|Home-Page]].
+
 # References:
 
 [Github DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash)

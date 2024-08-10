@@ -279,6 +279,10 @@ Redistribute default route into BGP neighbor:
 set protocols bgp 64512 neighbor 203.0.113.2 address-family ipv4-unicast default-originate
 ```
 
+# Related Notes:
+
+- Link to [[index|Home-Page]].
+
 # References:
 
 [VyOS 1.3 quick start documentation](https://docs.vyos.io/en/equuleus/quick-start.html)

@@ -53,7 +53,34 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: {
+        drag: true, // whether to allow panning the view around
+        zoom: true, // whether to allow zooming in and out
+        depth: 2, // how many hops of notes to display
+        scale: 1.0, // default view scale
+        repelForce: 0.1, // how much nodes should repel each other
+        centerForce: 0.2, // how much force to use when trying to center the nodes
+        linkDistance: 30, // how long should the links be by default?
+        fontSize: 0.6, // what size should the node labels be?
+        opacityScale: 1, // how quickly do we fade out the labels when zooming out?
+        removeTags: ["Folder-index"], // what tags to remove from the graph
+        showTags: true, // whether to show tags in the graph
+      },
+      globalGraph: {
+        drag: true,
+        zoom: true,
+        depth: -1,
+        scale: 1.0,
+        repelForce: 0.1,
+        centerForce: 0.2,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+        removeTags: ["Folder-index"], // what tags to remove from the graph
+        showTags: true, // whether to show tags in the graph
+      },
+    }),
     Component.Spacer(),
     Component.Explorer({
       title: "Site Directory:", // title of the explorer component

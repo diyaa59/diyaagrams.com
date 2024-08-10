@@ -91,3 +91,7 @@ If the above does not work try this:
 ```bash
 openssl pkcs12 -export -legacy -in fullchain.pem -inkey privkey.pem -out domain.pfx
 ```
+
+# Related Notes:
+
+- Link to [[index|Home-Page]].

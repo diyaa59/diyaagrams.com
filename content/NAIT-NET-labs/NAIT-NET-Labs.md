@@ -125,3 +125,7 @@ This lab is an implementation of CARP as a First Hop Redundancy Protocol (FHRP) 
 This lab is an implementation of three nodes of Proxmox in HCI mode. The Ceph protocol allows the three Proxmox nodes to act in HCI mode.
 
 ![[NAIT-NET-labs/Proxmox_HCI_Cluster/Proxmox_HCI_Lab_exported.drawio.svg|diagram]]
+
+# Related Notes:
+
+- Link to [[index|Home-Page]].

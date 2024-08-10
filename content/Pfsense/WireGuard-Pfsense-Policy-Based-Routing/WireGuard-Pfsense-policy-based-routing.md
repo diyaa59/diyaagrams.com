@@ -389,3 +389,6 @@ Your rules should look like this. The idea is to allow TCP, UDP, and echo-reques
 
 Finally, You have made it to the end 🙂. You are now utilizing policy based routing thanks to Pfsense and WireGuard.
 
+# Related Notes:
+
+- Link to [[index|Home-Page]].

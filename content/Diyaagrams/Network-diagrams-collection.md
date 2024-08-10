@@ -133,3 +133,7 @@ These are all the diagrams of how my home network looks and also the diagrams of
 This is my home network in 2021. Looking at this today (August 08, 2024), I think there are about a 100 things that I could have done better 🙂.
 
 ![[NAIT-NET-labs/Homelab/2021/Home_Network-Primary_Slide.drawio.svg]]
+
+# Related Notes:
+
+- Link to [[index|Home-Page]].

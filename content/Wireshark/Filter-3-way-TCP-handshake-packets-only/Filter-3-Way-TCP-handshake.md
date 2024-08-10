@@ -37,6 +37,10 @@ IPv6 filter:
 
 I can only see the first 3 packets in each TCP stream. This can be useful when trying to troubleshoot TCP problems with Wireshark.
 
+# Related Notes:
+
+- Link to [[index|Home-Page]].
+
 # References:
 
 [^1]: - [[https://osqa-ask.wireshark.org/questions/26174/filter-for-detecting-the-third-packet-in-a-3-way-handshake/|Wireshark forums]]
