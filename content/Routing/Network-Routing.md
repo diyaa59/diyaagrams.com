@@ -10,8 +10,8 @@ date: 2024-08-10
 # Overview:
 
 Author: Diyaa Alkanakre<br>
-Published date: August 09, 2024<br>
-Last updated: August 10, year<br>
+Published date: August 9th, 2024<br>
+Last updated: August 10th, 2024<br>
 
 This article contains all of my personal knowledge that I learned about routing while serving my time in post-secondary education.
 
