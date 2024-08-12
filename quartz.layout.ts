@@ -33,6 +33,7 @@ export const sharedPageComponents: SharedLayout = {
       "GitHub": "https://github.com/diyaa59",
       "Linkedin": "https://www.linkedin.com/in/diyaa-alkanakre/",
       "Homepage": "https://diyaagrams.com/",
+      "RSS": "https://diyaagrams.com/index.xml",
     },
   }),
 }

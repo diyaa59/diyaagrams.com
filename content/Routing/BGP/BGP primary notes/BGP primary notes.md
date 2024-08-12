@@ -14,6 +14,9 @@ Author: Diyaa Alkanakre<br>
 Published date: August 4th, 2024<br>
 Last updated: August 10th, 2024<br>
 
+>[!warning]
+>You are reading an incomplete article.
+
 This document will outline the theory behind how BGP operates. I plan on having all of my BGP notes in single document for ease of access/use. 
 
 ![[index#About Me|Home-Page]]

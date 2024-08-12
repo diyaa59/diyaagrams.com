@@ -88,7 +88,9 @@ The OSPF process on the router has multiple ways of defining the router ID in a 
 2. Highest IP address on a loopback interface.
 3. Highest IP on a non-loopback interface.
 
-If the router does not have any IPs configured on loopback or non-loopback interfaces, and the OSPF configuration does not specify a router ID, the OSPF process will fail to start on the router.
+If the router does not have any IPs configured on loopback or non-loopback interfaces, and the OSPF configuration does not specify a router ID, the OSPF process will fail to start on the router. 
+
+**Changing the Router-ID requires a restart of the OSPF routing process on the router regardless of the vendor. This is mentioned in [RFC2328](https://www.rfc-editor.org/rfc/rfc2328).**
 
 ## Protocol Functionality:
 
