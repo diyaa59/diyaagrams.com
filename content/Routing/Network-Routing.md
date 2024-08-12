@@ -263,9 +263,9 @@ I had an instructor in college named Terry Pearce, who taught TCP/IP network fun
 
 # Related Notes:
 
-- Link to [[index|Home-Page]].
-- My notes about BGP can be found on this page [[Routing/BGP/BGP primary notes/BGP primary notes|page]].
-- My notes about OSPFv2 can be found on this [[Routing/OSPF/OSPF Theory/OSPFv2-Theory/OSPFv2-Theory|page]].
+- [[index|Home-Page]].
+- [[Routing/BGP/BGP primary notes/BGP primary notes|BGP Notes]].
+- [[Routing/OSPF/OSPF Theory/OSPFv2-Theory/OSPFv2-Theory| OSPFv2 Notes]].
 
 
 # References:
