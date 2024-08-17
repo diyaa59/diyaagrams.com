@@ -29,7 +29,7 @@ This was one of the most significant projects that I had to work on in my COMP20
 
 ## Homelab 2021:
 
-![[NAIT-NET-labs/Homelab/2021/Home_Network-Primary_Slide.drawio.svg|diagram]]
+![[NAIT-NET-labs/Homelab/2021/Home_Network-Primary_Slide-Primary_Slide.drawio.svg|diagram]]
 
 ---
 
