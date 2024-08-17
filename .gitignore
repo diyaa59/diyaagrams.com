@@ -1,0 +1,13 @@
+.DS_Store
+.gitignore
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.quartz-cache
+private/
+.replit
+replit.nix
+content/.obsidian/workspace.json
+content/.obsidian/graph.json
+content/.obsidian/plugins/
