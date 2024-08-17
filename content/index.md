@@ -39,4 +39,6 @@ The screenshot above shows the notes in my offline Obsidian vault. My goal is to
 My name is Diyaa. I graduated from a network engineering post secondary program in 2023. I like to spend majority of my personal time making network infrastructure diagrams and technical documentation like the article you are reading right now. I am able to make large scale networks at home thanks to [Proxmox virtual environment](https://www.proxmox.com/en/proxmox-virtual-environment/overview).
 
 
-
+%%
+commit squash sync test
+%%
