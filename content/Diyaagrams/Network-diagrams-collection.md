@@ -20,9 +20,12 @@ This page contains multiple diagrams that I have created in the past. I will con
 I am mostly adding the names of the diagrams. Some of them have descriptions and legends. I am not changing issues that I see to show the differences between good and bad diagrams (Yes, they are not perfect and they will never be. I always have things to add, but there is only 24 hours in a day. I will make the next one better......).
 
 ---
-## HeadScale Lab:
+## Headscale Lab:
 
-This lab is a demonstration of [[https://headscale.net/|HeadScale]]. HeadScale is a NAT traversal VPN that uses the [[https://www.wireguard.com/|WireGuard]] protocol as its VPN underlay.
+> [!note]
+> Headscale is a fork of Tailscale
+
+This lab is a demonstration of [[https://headscale.net/|Headscale]]. Headscale is a NAT traversal VPN that uses the [[https://www.wireguard.com/|WireGuard]] protocol as its VPN underlay.
 
 ![[NAIT-NET-labs/HeadScale-lab/HeadScale_Research_Project.drawio.svg]]
 
