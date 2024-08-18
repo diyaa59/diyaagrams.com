@@ -2,22 +2,22 @@
 tags:
   - pfsense
   - Geo-blocking
-draft: true
+date: 2024-08-17
+title: Pfsense GeoIP Objects
 ---
 
 # Overview:
 
 Author: Diyaa<br>
-Published date: August 12, 2024<br>
-Last updated: August 12, 2024<br>
+Published date: August 17, 2024<br>
+Last updated: August 17, 2024<br>
 
+This article demonstrates how to enable and use GeoIP in pfSense. The GeoIP data is synced from [MaxMind](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services), a third-party provider. This is done using the pfBlockerNG-devel plugin which allows for adding GeoIP contents to access control rules. 
 
->[!warning]
->You are reading an incomplete article.
+> [!note]
+> I am demonstrating this for IPv4 GeoIP objects only. The process for IPv6 is very similar. You just need to create IPv6 GeoIP objects to use in IPv6 rules. **You can not use dual-stack rules with IPv4 and IPv6 GeoIP objects in the same rule.**
 
-This article demonstrates how to enable and use Geo-blocking on Pfsense. The Geo-blocking data is being synced from [MaxMind](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services). MixMind is a third-party provider.
-
-The Pfblocker-NG plugin allows for adding BGP autonomous system numbers and/or GeoIP contents to access control rules. Access control is simply the process of controlling access from or to a specific set of layer 3 and/or layer 4 addresses (IPs and ports).
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817215538.png]]
 
 # Technical Procedure:
 
@@ -27,30 +27,38 @@ The Pfblocker-NG plugin allows for adding BGP autonomous system numbers and/or G
 
 ![[Attachments/Pasted image 20240404000006.png]]
 
-## Sign up for a Maxmind account:
+## Sign up for a MaxMind account:
 
-This is the registration link: [https://www.maxmind.com/en/geolite2/signup](https://www.maxmind.com/en/geolite2/signup)
+This is the registration link for MaxMind: [https://www.maxmind.com/en/geolite2/signup](https://www.maxmind.com/en/geolite2/signup)
 
-### Generate a new license key:
+### Generate A New License Key:
 
-After you sign up, you will need to generate a new license key to allow your firewall to fetch the geo files automatically.
+> [!note]
+> This is using the GeoIP lite 2 database. This is the lowest tier service offered by MaxMind.
+
+After you sign up, you will need to generate a new license key to allow your Pfsense instance to sync the GeoIP database automatically.
 
 ![[Attachments/Pasted image 20240404000412.png]]
+
+> [!note]
+> Be sure to copy the `Account ID` as you will need it later.
 
 ![[Attachments/Pasted image 20240404000457.png]]
 
 ![[Attachments/Pasted image 20240404000520.png]]
 
-You need to copy this key so that you paste it into Pfsense:
+You need to copy this key to add it into the Pfsense configuration in a later step:
 
 > [!warning]
-> You won't be able to see this key again after you return to main menu. Make sure to copy it now and paste it into Notepad 😉.
+> You won't be able to see this key again after you return to main menu. Make sure to copy it now.
 
 ![[Attachments/Pasted image 20240404000614.png]]
 
-# Enable the PfblockerNG-devel plugin:
+## Configure The `pfBlockerNG-devel` Plugin:
 
 ![[Attachments/Pasted image 20240403235737.png]]
+
+Exit the default configuration Wizard. You can follow it if you would like, but I am not following it in this procedure.
 
 ![[Attachments/Pasted image 20240403235806.png]]
 
@@ -58,9 +66,9 @@ You need to copy this key so that you paste it into Pfsense:
 
 ![[Attachments/Pasted image 20240404000911.png]]
 
-After scrolling down as instructed in the previous screenshot add the license key you got from the mixmind website here:
+After scrolling down add the license key and account ID you got from the mixmind website here:
 
-![[Attachments/Pasted image 20240404001008.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817204354.png]]
 
 Update the Geoblocking data on Pfsense:
 
@@ -68,36 +76,47 @@ Update the Geoblocking data on Pfsense:
 
 ![[Attachments/Pasted image 20240404001127.png]]
 
-Now go back to the geoblocking settings:
+Navigate to the IP menu to create aliases:
 
-![[Attachments/Pasted image 20240404001203.png]]
+> [!warning]
+> I am only using the alias type as I like to use the alias in multiple places. Just be aware of the de-duplication process with the "Alias Deny" option.
+> This is the difference between all the alias types:
+> 
+> ![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817205042.png]]
 
-Set the following settings and make sure to hit the save button in the bottom right of the screenshot:
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817205446.png]]
 
-![[Attachments/Pasted image 20240404001337.png]]
+You can customize your IPv4 list to your own needs. The list I have below will hold GeoIPs for Canadian and US IPs. The source fields in the section below have auto completion. You will start to see the countries names show up as you type.
 
-Now you need to specify what countries you want to allow in each region (I am going to show you North America as an example):
+> [!info]
+> Any GeoIP source with the `_rep` prefix at the end is the list of IPs for that country being used in other countries. Those are known as representative IPs. You can add them to your if you would like.
+> 
+> If the cron update fails indicating the `_rep` objects, that maybe indicating it is not available from the upstream provider (MaxMind.)
+> 
+> ![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817210254.png]]
 
-![[Attachments/Pasted image 20240404001533.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817211556.png]]
 
-Please read the text on this screenshot (very important to understand this part) 😉:
+You will see the section below if you scroll down in the same window as the previous screenshot. Customize the values under the settings header to meet your own needs and save the list after that (there is a button at the very bottom to "Save IPv4 settings".)
 
-![[Attachments/Pasted image 20240404001816.png]]
+> [!note] Important:
+> Be sure to change the action as it is set to disable by default.
 
-Scroll to the bottom and save:
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817210552.png]]
 
-![[Attachments/Pasted image 20240404001918.png]]
+Navigate to the update section to force an update of all the lists:
 
-Go back and update the PfblockerNG tables:
+> [!note] Important:
+> You must run an update every time you make changes to any of the objects in pfBlockerNG-devel.
 
-![[Attachments/Pasted image 20240404001952.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817211813.png]]
 
-![[Attachments/Pasted image 20240404002007.png]]
+## Access Control Rule With GeoIP Object:
 
-# Create a firewall rule with Geo-blocking object:
+You will start to see the GeoIP aliases auto complete their names as you type in the source field. You do not have to use this only in the source field, this is just my use case for this demonstration.
 
-You will start to see the geo location aliases auto complete their names as you type:
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240817213421.png]]
 
-![[Attachments/Pasted image 20240404002206.png]]
+# Related Notes:
 
-You can set the Geo location alias as the source or destination in your rule and you have just implemented Geo blocking on Pfsense 😊.
+- Link to [[index|Home-Page]].

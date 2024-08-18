@@ -6,5 +6,5 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./Attachments",
   "alwaysUpdateLinks": true,
-  "livePreview": false
+  "livePreview": true
 }
