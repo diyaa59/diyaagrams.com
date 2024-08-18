@@ -1,10 +1,10 @@
 ---
+date: 2024-08-03
 title: Pfsense WireGuard tunnels policy-based routing
 tags:
   - Pfsense
   - WireGuard
   - Policy-Based-Routing
-date: 2024-08-03
 ---
 # Overview
 

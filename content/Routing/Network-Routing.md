@@ -1,10 +1,10 @@
 ---
 title: TCP/IP Routing
+date: 2024-08-10
 tags:
   - routing
 aliases:
   - routing-master-note
-date: 2024-08-10
 ---
 
 # Overview:

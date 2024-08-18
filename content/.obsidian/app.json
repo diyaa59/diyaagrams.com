@@ -9,5 +9,6 @@
   "livePreview": true,
   "foldHeading": false,
   "showLineNumber": true,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "propertiesInDocument": "visible"
 }
