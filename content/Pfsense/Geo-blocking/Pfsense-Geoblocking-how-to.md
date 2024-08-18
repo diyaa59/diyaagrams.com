@@ -23,9 +23,9 @@ This article demonstrates how to enable and use GeoIP in pfSense. The GeoIP data
 
 ## Installing Geo-Blocking Plugin: 
 
-![[Attachments/Pasted image 20240403235229.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240403235229.png]]
 
-![[Attachments/Pasted image 20240404000006.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000006.png]]
 
 ## Sign up for a MaxMind account:
 
@@ -38,33 +38,33 @@ This is the registration link for MaxMind: [https://www.maxmind.com/en/geolite2/
 
 After you sign up, you will need to generate a new license key to allow your Pfsense instance to sync the GeoIP database automatically.
 
-![[Attachments/Pasted image 20240404000412.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000412.png]]
 
 > [!note]
 > Be sure to copy the `Account ID` as you will need it later.
 
-![[Attachments/Pasted image 20240404000457.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000457.png]]
 
-![[Attachments/Pasted image 20240404000520.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000520.png]]
 
 You need to copy this key to add it into the Pfsense configuration in a later step:
 
 > [!warning]
 > You won't be able to see this key again after you return to main menu. Make sure to copy it now.
 
-![[Attachments/Pasted image 20240404000614.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000614.png]]
 
 ## Configure The `pfBlockerNG-devel` Plugin:
 
-![[Attachments/Pasted image 20240403235737.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240403235737.png]]
 
 Exit the default configuration Wizard. You can follow it if you would like, but I am not following it in this procedure.
 
-![[Attachments/Pasted image 20240403235806.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240403235806.png]]
 
-![[Attachments/Pasted image 20240403235844.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240403235844.png]]
 
-![[Attachments/Pasted image 20240404000911.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404000911.png]]
 
 After scrolling down add the license key and account ID you got from the mixmind website here:
 
@@ -72,9 +72,9 @@ After scrolling down add the license key and account ID you got from the mixmind
 
 Update the Geoblocking data on Pfsense:
 
-![[Attachments/Pasted image 20240404001057.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404001057.png]]
 
-![[Attachments/Pasted image 20240404001127.png]]
+![[Pfsense/Geo-blocking/Attachments/Pasted image 20240404001127.png]]
 
 Navigate to the IP menu to create aliases:
 
