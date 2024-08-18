@@ -6,5 +6,8 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./Attachments",
   "alwaysUpdateLinks": true,
-  "livePreview": true
+  "livePreview": true,
+  "foldHeading": false,
+  "showLineNumber": true,
+  "showInlineTitle": false
 }

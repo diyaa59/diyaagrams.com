@@ -72,7 +72,7 @@ Distance vector routing protocols determine the best dynamic route between the s
 
 Link state routing protocols are more advanced than distance vector routing protocols. They build a map of the entire network knowing exactly how far away each network lives based on the route preference. The Open Shortest Path First (OSPF) routing protocol uses the bandwidth to determine the best route.
 
-Link state routers advertise their links making them more trust worthy than most distance vector routing protocols. OSPF is the most famous ==**open standard**== link state routing protocol that can scale to manage and link networks.
+Link state routers advertise their links making them more trust worthy than most distance vector routing protocols. OSPF is the most famous **==open standard==** link state routing protocol that can scale to manage and link networks.
 
 I personally like link state routing protocols due to their ability to scale. I use OSPFv2 (IPv4 routing) and OSPFv3 (IPv6 routing) within my home network to maintain a dynamic and redundant network. I think of OSPF as the most shiny glowing star in the galaxy of link-state routing.
 
