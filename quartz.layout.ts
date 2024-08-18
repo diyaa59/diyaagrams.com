@@ -108,7 +108,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Spacer(),
     Component.ArticleTitle(),
     Component.Spacer(),
-    Component.ContentMeta()
+    // Component.ContentMeta()
   ],
   left: [
     Component.PageTitle(),

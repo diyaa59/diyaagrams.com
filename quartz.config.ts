@@ -57,7 +57,7 @@ const config: QuartzConfig = {
         language: "yaml",
       }),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter"],
+        priority: ["frontmatter", "git", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {
