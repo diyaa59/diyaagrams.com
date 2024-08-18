@@ -10,7 +10,7 @@ title: Pfsense GeoIP Objects
 
 Author: Diyaa<br>
 Published date: August 17, 2024<br>
-Last updated: August 17, 2024<br>
+Last updated: August 18, 2024<br>
 
 This article demonstrates how to enable and use GeoIP in pfSense. The GeoIP data is synced from [MaxMind](https://www.maxmind.com/en/solutions/ip-geolocation-databases-api-services), a third-party provider. This is done using the pfBlockerNG-devel plugin which allows for adding GeoIP contents to access control rules. 
 

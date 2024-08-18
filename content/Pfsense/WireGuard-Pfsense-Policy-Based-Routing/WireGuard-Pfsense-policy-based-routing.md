@@ -10,30 +10,30 @@ date: 2024-08-03
 
 Author: Diyaa<br>
 Published date: August 3rd, 2024<br>
-Last updated: August 3rd, 2024<br>
+Last updated: August 18rd, 2024<br>
 
-Documentation of how to use Pfsense to utilize Policy Based Routing (PBR) to a remote cloud virtual private server over a WireGuard VPN tunnel. This will allow you to setup custom routes for specific hosts in your network to route out of a VPS public IP.
+This article explains how to utilize Policy Based Routing (PBR) to a remote cloud virtual private server over a WireGuard VPN tunnel in Pfsense. This will allow for the setup of custom specific host default route modification based on the policy based routing policies.
 
 > [!WARNING]
-> I am using nftables in this setup. Installing nftables over iptables "might" override your iptables ruleset.
+> I am using nftables in this setup. Installing nftables over iptables might override your iptables ruleset.
 
-I am using the range of `198.51.100.0/30` on the VPN tunnel between the VPS and Pfsense. Just in case you are asking "Isn't that a public IP?". Please, review [RFC5737](https://www.rfc-editor.org/rfc/rfc5737) 😉.
+I am using the range of `198.51.100.0/30` on the VPN tunnel between the VPS and Pfsense. Just in case you are asking "Isn't that a public IP?". Review [RFC5737](https://www.rfc-editor.org/rfc/rfc5737) for more information about documentation IP ranges.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420030137.png]]
 
-I am also doing MSS clamping to ensure that the TCP segment size does not exceed the value of the MTU on the WireGuard VPN tunnel. What is MSS clamping you ask? Review [RFC4459](https://www.rfc-editor.org/rfc/rfc4459) 😉.
+I am also doing MSS clamping to ensure that the TCP segment size does not exceed the value of the MTU on the WireGuard VPN tunnel. What is MSS clamping you ask? Review [RFC4459](https://www.rfc-editor.org/rfc/rfc4459) for more information on MSS clamping.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420030529.png]]
 
 # Diagram:
 
-This is a diagram overview of what will be configured by following the steps in this document.
+This is a diagram overview of what will be configured by following the steps in this article.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Diagram/Policy-Based-Routing-With-Pfsense-over-WireGuard.drawio.svg]]
 
 # VPS setup:
 
-## Install required packages:
+## Install Required Packages:
 
 Install all the required packages on your VPS.
 
@@ -42,7 +42,7 @@ sudo apt update; sudo apt upgrade -y; \
 sudo apt install ssh wireguard nftables coreutils -y
 ```
 
-## Add kernel parameters to allow IP forwarding:
+## Enable IP Forwarding:
 
 Add the IP forwarding kernel module:
 
@@ -56,7 +56,7 @@ Apply kernel modules:
 sudo sysctl -p
 ```
 
-## Nftables ruleset:
+## Nftables Ruleset:
 
 Place the config below in the following file `/etc/nftables.conf`.
 
@@ -155,9 +155,9 @@ Apply the nftables ruleset:
 sudo systemctl enable --now nftables; sudo systemctl reload nftables
 ```
 
-## WireGuard setup:
+## WireGuard Setup:
 
-### Generate WireGuard keys:
+### Generate WireGuard Keys:
 
 You can use this baby script that I made to generate all the WireGuard keys for your VPS and Pfsense router. Run the commands below in a bash shell to generate all the required WireGuard keys.
 
@@ -179,7 +179,7 @@ echo "Pfsense public Key: ${CLIENT_PUB_KEY}"; \
 echo "Preshared Key: ${PRESHARED_KEY}"
 ```
 
-### VPS WireGuard configuration:
+### VPS WireGuard Configuration:
 
 > [!IMPORTANT]
 > Things to change in the WireGuard configuration of the VPS:
@@ -226,7 +226,7 @@ sudo systemctl enable --now wg-quick@wg0
 
 # Pfsense Configuration:
 
-## Download the WireGuard package:
+## Download the WireGuard Package:
 
 Download the WireGuard package from available packages section under the package manager in Pfsense.
 
@@ -236,7 +236,7 @@ Search for WireGuard and install the WireGuard package.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020227.png]]
 
-## Create a new WireGuard tunnel:
+## Create a New WireGuard Tunnel:
 
 Create a new WireGuard tunnel on Pfsense:
 
@@ -252,13 +252,13 @@ Create a new WireGuard tunnel on Pfsense:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420020744.png]]
 
-## Enable the WireGuard package:
+## Enable The WireGuard Package:
 
 Enable the WireGuard package:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022925.png]]
 
-## Add a peer to the WireGuard tunnel:
+## Add a Peer to The WireGuard Tunnel:
 
 Add a peer to the tunnel:
 
@@ -270,7 +270,7 @@ Add a peer to the tunnel:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420021305.png]]
 
-## Assign the WireGuard tunnel interface on Pfsense:
+## Assign The WireGuard Tunnel Interface on Pfsense:
 
 Create a tunnel interface on Pfsense:
 
@@ -285,7 +285,7 @@ Create a tunnel interface on Pfsense:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420021818.png]]
 
-## Add the VPS as a gateway on Pfsense:
+## Add The VPS as a Gateway on Pfsense:
 
 Adding a gateway of the remove VPS IP on the WireGuard interface:
 
@@ -298,14 +298,15 @@ Adding a gateway of the remove VPS IP on the WireGuard interface:
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420022701.png]]
 
-## Add an outbound "No NAT" policy:
-
-Add a "No NAT policy".
+## Add an Outbound "No NAT" Policy:
 
 > [!IMPORTANT]
-> NAT is eval and you should try to reduce NATing as much as you can in your life. The less you NAT the less kittens die.... [Read this article](https://www.zerotier.com/blog/the-state-of-nat-traversal/) 🙁.
+> NAT is eval and you should try to reduce NATing as much as you can in your life. The less you NAT the less kittens die.... [Read this article](https://www.zerotier.com/blog/the-state-of-nat-traversal/).
 > 
 > ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033042.png]]
+
+> [!warning]
+> I am assuming you have added your routes correctly to the `AllowedIPs` field in the WireGuard configuration on the VPS. You can not turn off NAT if your routes are not configured correctly. You can skip this step if you wish to keep murdering kittens.
 
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033206.png]]
@@ -322,7 +323,7 @@ Scroll to the very bottom and you will see the arrow pointing upward at the bott
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420033606.png]]
 
-## Create firewall rules on Pfsense:
+## Create Access Control Rules on Pfsense:
 
 Create a new firewall rule to utilize policy based routing over the WireGuard tunnel you created.
 
@@ -330,12 +331,12 @@ Create a new firewall rule to utilize policy based routing over the WireGuard tu
 
 
 > [!NOTE]
-> You can customize the rule as you wish 😊. I will be mostly pointing you to the steps of specifying the gateway on the rule (This is how you utilize policy based routing on Pfsense).
+> You can customize the rule as you wish. I will be mostly pointing you to the steps of specifying the gateway on the rule (This is how you utilize policy based routing on Pfsense).
 > I am adding this rule to the top of my rules. Feel free to change the positioning of the rule if you have a complex rulebase.
 
-I will be placing this rule on the interface where client traffic is coming inbound. You need to place the rule on the inbound interface where the client traffic will be coming from.
+I will be placing this rule on the interface receiving inbound client traffic (client IP as source). You need to place the rule on the inbound interface where the client traffic will be coming from.
 
-You will see the add button at the bottom of the screen with an arrow pointing upward.
+You will see the button for adding an access control rule at the bottom of the page with an arrow pointing upward. This will add the rule to the top of the rulebase making it match first.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420023456.png]]
 
@@ -351,7 +352,7 @@ You will see an option above the save button "`Display Advanced".
 > [!IMPORANT]
 > You will have to apply the rules in Pfsense in order for the rule to take affect. You will see a pop up prompting you to apply the rules after you save the rule. You need to click the Apply button for the changes to take affect.
 
-Scroll down until you find the `Gateway` option. Set the gateway to the VPS gateway you configured in previous steps. Now you can save the rule 🙂.
+Scroll down until you find the `Gateway` option. Set the gateway to the VPS gateway you configured in the previous steps. Now you can save the rule.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024221.png]]
 
@@ -359,7 +360,7 @@ Now you have configured policy based routing. However, we are not done yet...
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024521.png]]
 
-## Recommended rules setup:
+## Recommended Rules Setup:
 
 You can allow echo-request (ping) and add a deny rule under the rule in the step above to prevent traffic leak outside the VPN tunnel. This guarantees the host traffic will be going over the VPN tunnel only. 
 
@@ -370,6 +371,9 @@ Clone the rule you created in the previous step.
 Change the protocol to `ICMP` and set the `ICMP subtype` to `Echo request`.
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420024823.png]]
+
+> [!note]
+> This is to prevent any traffic that is not permitted in the top 2 rules from bypassing the policy based route.
 
 Clone the second rule you created to create a drop rule.
 
@@ -387,7 +391,7 @@ Your rules should look like this. The idea is to allow TCP, UDP, and echo-reques
 
 ![[Pfsense/WireGuard-Pfsense-Policy-Based-Routing/Attachments/Pasted image 20240420025500.png]]
 
-Finally, You have made it to the end 🙂. You are now utilizing policy based routing thanks to Pfsense and WireGuard.
+Finally, You have made it to the end. You are now utilizing policy based routing with Pfsense and WireGuard.
 
 # Related Notes:
 
