@@ -5,6 +5,7 @@ tags:
 aliases:
   - To-Do-List
 date: 2024-08-10
+draft: "true"
 ---
 
 # To Do List Items:
@@ -17,6 +18,8 @@ date: 2024-08-10
 - [ ] Keep working on BGP notes.
 - [ ] Proxmox Backup documentation.
 - [ ] Proxmox Templates documentation.
+- [ ] Pfsense `qemu-guest-agent` installation on Proxmox.
+- [ ] Pfsense settings tuning.
 
 
 # Related Notes:
