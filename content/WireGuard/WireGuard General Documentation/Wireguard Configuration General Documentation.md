@@ -1,8 +1,8 @@
 ---
-tags:
-  - WireGuard
 title: WireGuard general documentation
 date: 2024-08-03
+tags:
+  - WireGuard
 ---
 # Overview:
 

@@ -1,10 +1,10 @@
 ---
 title: To Do list
+date: 2024-08-10
 tags:
   - planning
 aliases:
   - To-Do-List
-date: 2024-08-10
 draft: "true"
 ---
 

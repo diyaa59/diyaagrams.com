@@ -1,9 +1,9 @@
 ---
+title: Pfsense GeoIP Objects
+date: 2024-08-17
 tags:
   - pfsense
   - Geo-blocking
-date: 2024-08-17
-title: Pfsense GeoIP Objects
 ---
 
 # Overview:

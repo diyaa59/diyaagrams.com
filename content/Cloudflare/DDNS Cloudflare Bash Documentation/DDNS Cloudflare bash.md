@@ -1,9 +1,9 @@
 ---
 title: Cloudflare API dynamic DNS with bash
+date: 2024-08-03
 tags:
   - Cloudflare
   - DDNS
-date: 2024-08-03
 ---
 # Overview:
 

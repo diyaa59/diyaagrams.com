@@ -1,9 +1,9 @@
 ---
 title: BGP notes
+date: 2024-08-10
 tags:
   - BGP
   - routing
-date: 2024-08-10
 aliases:
   - A1
   - BGP-routing-notes

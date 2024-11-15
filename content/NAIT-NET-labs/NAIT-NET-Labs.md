@@ -1,10 +1,10 @@
 ---
 title: NAIT NET Labs
+date: 2024-08-03
 tags:
   - NAIT
   - NET
   - College
-date: 2024-08-03
 ---
 # Overview:
 

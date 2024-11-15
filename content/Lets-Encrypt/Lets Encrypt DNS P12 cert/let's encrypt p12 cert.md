@@ -1,10 +1,10 @@
 ---
 title: Let's Encrypt P12 certificate with DNS validation
+date: 2024-08-03
 tags:
   - Lets-Encrypt
   - Certificates
   - TLS
-date: 2024-08-03
 ---
 # Overview:
 

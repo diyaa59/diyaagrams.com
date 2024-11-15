@@ -1,8 +1,8 @@
 ---
 title: VyOS Router CLI Syntax
+date: 2024-08-16
 tags:
   - VyOS
-date: 2024-08-16
 ---
 # Overview:
 
