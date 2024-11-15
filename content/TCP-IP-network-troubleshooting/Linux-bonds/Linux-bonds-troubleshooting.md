@@ -19,8 +19,11 @@ This article contains helpful commands that can be used for troubleshooting bond
 
 The following command will list the status of all the slave interfaces participating in a bond group:
 
+> [!important]
+> `bond0` is the id of the bond interface. You might need to change this to match your bond interface.
+
 ```bash
-cat /proc/net/bonding/bond1
+cat /proc/net/bonding/bond0
 ```
 
 ![[TCP-IP-network-troubleshooting/Linux-bonds/Attachments/Pasted image 20241114182855.png]]
