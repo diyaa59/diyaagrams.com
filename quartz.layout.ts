@@ -8,11 +8,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [
     Component.Spacer(),
     Component.Backlinks(),
-    //Component.RecentNotes({ 
-    //  title: "Recent Notes Published/Modified:",
-    //  limit: 5,
-    //  showTags: false,
-    //}),
+    Component.RecentNotes({ 
+      title: "Recently Published or Modified Notes:",
+      limit: 5,
+      showTags: false,
+    }),
     Component.Comments({
       provider: 'giscus',
       options: {
@@ -43,7 +43,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
-    // Component.ContentMeta(),
+    Component.ContentMeta(),
     Component.TagList(),
     Component.TableOfContents(),
   ],

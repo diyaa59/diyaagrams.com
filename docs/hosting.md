@@ -61,6 +61,8 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
       - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - name: Install Dependencies
         run: npm ci
       - name: Build Quartz
@@ -206,7 +208,7 @@ build:
     paths:
       - public
   tags:
-    - docker
+    - gitlab-org-docker
 
 pages:
   stage: deploy
@@ -244,6 +246,28 @@ server {
     }
 }
 ```
+
+### Using Apache
+
+Here's an example of how to do this with Apache:
+
+```apache title=".htaccess"
+RewriteEngine On
+
+ErrorDocument 404 /404.html
+
+# Rewrite rule for .html extension removal (with directory check)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Handle directory requests explicitly
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)/$ $1/index.html [L]
+```
+
+Don't forget to activate brotli / gzip compression.
 
 ### Using Caddy
 
