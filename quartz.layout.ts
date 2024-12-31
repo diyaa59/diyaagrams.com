@@ -50,8 +50,8 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.Darkmode(),
-    Component.Spacer(),
     Component.Search(),
+    Component.Spacer(),
   ],
   right: [
     Component.Graph({
@@ -82,7 +82,6 @@ export const defaultContentPageLayout: PageLayout = {
         showTags: true, // whether to show tags in the graph
       },
     }),
-    Component.Spacer(),
     Component.Explorer({
       title: "Site Directory:", // title of the explorer component
       // filterFn: undefined, // apply no filter function, every file and folder will visible
@@ -98,6 +97,7 @@ export const defaultContentPageLayout: PageLayout = {
         }
       },
     }),
+    Component.Spacer(),
   ],
 }
 
@@ -112,14 +112,12 @@ export const defaultListPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.Spacer(),
     Component.Search(),
-    Component.Spacer(),
     Component.Darkmode(),
+    Component.Spacer(),
   ],
   right: [
     Component.Graph(),
-    Component.Spacer(),
     Component.Explorer({
       title: "Site Directory:", // title of the explorer component
       // filterFn: undefined, // apply no filter function, every file and folder will visible
@@ -135,5 +133,6 @@ export const defaultListPageLayout: PageLayout = {
         }
       },
     }),
+    Component.Spacer(),
   ],
 }
